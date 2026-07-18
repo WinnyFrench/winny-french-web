@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.winnyfrench.com/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://winnyfrench.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://winnyfrench.com/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://winnyfrench.com/post/become-fluent-in-french</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://winnyfrench.com/post/passe-compose-vs-imparfait</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://winnyfrench.com/post/french-verb-tenses-explained</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://winnyfrench.com/post/passe-compose</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://winnyfrench.com/post/french-conjugation-er-ir-re</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://winnyfrench.com/post/is-a-french-tutor-worth-it-vs-duolingo-and-apps-an-honest-answer</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://winnyfrench.com/post/how-much-does-a-french-tutor-cost-in-canada-2026-price-guide</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://winnyfrench.com/post/struggling-with-french-immersion-a-parent-s-guide-to-helping-your-child</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://winnyfrench.com/post/french-for-express-entry-how-many-crs-points-you-can-earn-in-2026</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://winnyfrench.com/post/tef-canada-and-tcf-canada-a-complete-prep-guide-for-immigration-applicants</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://winnyfrench.com/post/winny-french-vs-preply-italki-and-language-apps-an-honest-comparison</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
