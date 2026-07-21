@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.winnyfrench.com/sitemap.xml
+Sitemap: https://winnyfrench.com/sitemap.xml
