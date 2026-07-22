@@ -74,13 +74,31 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:13px;width:12px;heig
 .final{background:var(--navy);color:#fff;text-align:center}
 .final h2{color:#fff}
 .final p{color:rgba(255,255,255,.8);max-width:52ch;margin:0 auto 22px}
-.also{margin-top:14px;font-size:15px;color:var(--muted)}
+.also{margin-top:30px;font-size:15px;color:var(--muted)}
 .also a{color:#9d9dff;font-weight:600;text-decoration:none}
 footer{background:#07071c;color:#c9c9d6;padding:40px 0;text-align:center}
 footer .logo{color:#fff;display:inline-block;margin-bottom:14px}
 footer .fnav{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;font-size:14px;margin-bottom:14px}
 footer a{text-decoration:none}
 footer small{opacity:.5;font-size:12.5px}
+#book{background:var(--navy);color:#fff}
+#book h2{color:#fff}
+#book .lead{color:rgba(255,255,255,.75)}
+.formwrap{display:grid;grid-template-columns:1fr;gap:40px;margin-top:36px;align-items:start}
+@media(min-width:860px){.formwrap{grid-template-columns:1fr 1.1fr}}
+form.book{background:#fff;color:var(--ink);border-radius:22px;padding:28px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{margin-bottom:16px}
+label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;padding:12px 14px;border:1px solid #dfe2ea;border-radius:10px;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(27,27,230,.14)}
+textarea{min-height:96px;resize:vertical}
+form.book .cta{width:100%;text-align:center;margin-top:6px}
+.formnote{font-size:12.5px;color:var(--muted);margin-top:12px;text-align:center}
+.hp{position:absolute;left:-9999px}
+#formStatus{margin-top:14px;font-weight:600;font-size:15px}
+.contactside p{color:rgba(255,255,255,.82);margin-bottom:14px}
+.contactside a{color:#9d9dff;font-weight:600}
 </style>
 <script type="application/ld+json">
 {
@@ -125,9 +143,9 @@ footer small{opacity:.5;font-size:12.5px}
 <a href="/#tutors">Tutors</a>
 <a href="/blog">Blog</a>
 <a href="/#faq">FAQ</a>
-<a href="/#contact">Contact</a>
+<a href="#book">Contact</a>
 </nav>
-<a href="/#contact" class="cta sm">Book Free Class</a>
+<a href="#book" class="cta sm">Book Free Class</a>
 </div>
 </header>
 
@@ -137,7 +155,7 @@ footer small{opacity:.5;font-size:12.5px}
 <span class="badge"><span class="dot"></span> Improvement in 4 weeks, or a free lesson</span>
 <h1>French tutoring for Toronto students, online and affordable</h1>
 <p class="sub">Core French, immersion, high school, and exam help for Toronto learners of all ages, from just $25/hour.</p>
-<a href="/#contact" class="cta light">Book Your Free Class</a>
+<a href="#book" class="cta light">Book Your Free Class</a>
 <p class="reassure">Free 30-minute trial. No strings attached. Classes 7 days a week.</p>
 </div>
 </section>
@@ -168,6 +186,47 @@ footer small{opacity:.5;font-size:12.5px}
 <li>Toronto Catholic District School Board (TCDSB)</li>
 <li>Conseil scolaire Viamonde</li>
 </ul>
+</div>
+</section>
+
+<section id="book">
+<div class="wrap">
+<div class="eyebrow" style="color:#ff6b61">Ready to get started?</div>
+<h2>Book your free trial class in Toronto.</h2>
+<p class="lead">Fill out the form and a tutor will be in touch within 24 hours to schedule your class.</p>
+<div class="formwrap">
+<div class="contactside">
+<p>Prefer to reach us directly?</p>
+<p>Call or text anytime: <a href="tel:+16473894958">(647) 389-4958</a></p>
+<p style="margin-top:22px;font-size:14px;color:rgba(255,255,255,.6)">Classes run Monday to Friday, 4pm to 9pm, and anytime on weekends (all times Eastern). Open to students and adult learners across Canada.</p>
+</div>
+<form class="book" id="bookForm">
+<input type="hidden" name="access_key" value="0216383f-c37e-45cb-87e1-48988cbb0d50">
+<input type="hidden" name="subject" value="New free trial request from Winny French (Toronto page)">
+<input type="hidden" name="from_name" value="Winny French Website">
+<input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+<div class="row">
+<div class="field"><label for="fn">First name</label><input id="fn" name="First name" required></div>
+<div class="field"><label for="ln">Last name</label><input id="ln" name="Last name" required></div>
+</div>
+<div class="field"><label for="em">Email</label><input id="em" type="email" name="Email" required></div>
+<div class="field"><label for="ph">Phone</label><input id="ph" type="tel" name="Phone"></div>
+<div class="field"><label for="hd">How did you hear about us?</label>
+<select id="hd" name="How did you hear about us">
+<option value="">Select one</option>
+<option>Google search</option>
+<option>Social media</option>
+<option>Friend or family</option>
+<option>Returning student</option>
+<option>Other</option>
+</select>
+</div>
+<div class="field"><label for="msg">Message</label><textarea id="msg" name="Message" placeholder="Tell us the learner's level and what you're hoping to work on."></textarea></div>
+<button type="submit" class="cta">Book Your Free Class</button>
+<div id="formStatus" role="status" aria-live="polite"></div>
+<p class="formnote">We reply within 24 hours. Your details are only used to arrange your trial class.</p>
+</form>
+</div>
 </div>
 </section>
 
@@ -210,7 +269,7 @@ footer small{opacity:.5;font-size:12.5px}
 <div class="eyebrow" style="color:#ff6b61">Ready to start?</div>
 <h2>Book a free class in Toronto.</h2>
 <p>Fill out the form and a tutor will be in touch within 24 hours to schedule your free 30-minute trial.</p>
-<a href="/#contact" class="cta">Book Your Free Class</a>
+<a href="#book" class="cta">Book Your Free Class</a>
 <p class="also">Also serving <a href="/french-tutor-ottawa">Ottawa</a> and <a href="/french-tutor-mississauga">Mississauga</a>. New to tutoring? Read <a href="/post/how-much-does-a-french-tutor-cost-in-canada-2026-price-guide" style="color:#9d9dff">what a French tutor costs in Canada</a>.</p>
 </div>
 </section>
@@ -223,11 +282,39 @@ footer small{opacity:.5;font-size:12.5px}
 <a href="/#tutors">Tutors</a>
 <a href="/blog">Blog</a>
 <a href="/#faq">FAQ</a>
-<a href="/#contact">Contact</a>
+<a href="#book">Contact</a>
 </div>
 <small>Online French tutoring across Canada &copy; Winny French</small>
 </div>
 </footer>
 
+<script>
+const form = document.getElementById('bookForm');
+const status = document.getElementById('formStatus');
+form.addEventListener('submit', async (e) => {
+e.preventDefault();
+status.style.color = '#5b5b6b';
+status.textContent = 'Sending...';
+try {
+const res = await fetch('https://api.web3forms.com/submit', {
+method: 'POST',
+headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+body: JSON.stringify(Object.fromEntries(new FormData(form)))
+});
+const data = await res.json();
+if (data.success) {
+form.reset();
+status.style.color = '#0a8a4a';
+status.textContent = 'Thank you. A tutor will be in touch within 24 hours to schedule your class.';
+} else {
+status.style.color = '#E63329';
+status.textContent = 'Something went wrong. Please call or text (647) 389-4958 and we will sort it out.';
+}
+} catch (err) {
+status.style.color = '#E63329';
+status.textContent = 'Something went wrong. Please call or text (647) 389-4958 and we will sort it out.';
+}
+});
+</script>
 </body>
 </html>
