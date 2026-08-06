@@ -13,7 +13,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop
 .bar{display:flex;align-items:center;justify-content:space-between;padding:15px 24px;max-width:var(--maxw);margin:0 auto}
 .logo{font-weight:800;font-size:23px;letter-spacing:-.02em;text-decoration:none}
 .logo .b{color:var(--blue)}.logo .r{color:var(--red)}
-nav.links{display:none;gap:26px;font-size:15px;color:var(--muted);font-weight:500}
+nav.links{display:none;flex-wrap:wrap;gap:26px;font-size:15px;color:var(--muted);font-weight:500}
 nav.links a{text-decoration:none;color:var(--muted)}
 nav.links a:hover{color:var(--ink)}
 @media(min-width:900px){nav.links{display:flex}}
