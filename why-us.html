@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | Winny French</title>
-<meta name="description" content="Contact Winny French. Book a free 30-minute trial French class or ask a question. We reply within 24 hours.">
+<title>Why Winny French | Affordable Online French Tutoring</title>
+<meta name="description" content="Why families choose Winny French for Kids: classes from $25 an hour, small groups of up to three learners, engaging lessons, and availability every day.">
 <meta name="theme-color" content="#0B0B28">
-<link rel="canonical" href="https://winnyfrench.com/contact">
+<link rel="canonical" href="https://winnyfrench.com/why-us">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Contact | Winny French">
-<meta property="og:description" content="Contact Winny French. Book a free 30-minute trial French class or ask a question. We reply within 24 hours.">
-<meta property="og:url" content="https://winnyfrench.com/contact">
+<meta property="og:title" content="Why Winny French | Affordable Online French Tutoring">
+<meta property="og:description" content="Why families choose Winny French for Kids: classes from $25 an hour, small groups of up to three learners, engaging lessons, and availability every day.">
+<meta property="og:url" content="https://winnyfrench.com/why-us">
 <meta property="og:site_name" content="Winny French">
 <meta property="og:image" content="https://winnyfrench.com/og-cover.png">
 <meta property="og:image:width" content="1200">
@@ -113,6 +113,8 @@ form.book .cta{width:100%;text-align:center;margin-top:6px}
 .tutor .av img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;object-position:center 20%}
 .tutor h3{font-size:19px;margin:0 0 8px}
 .tutor p{font-size:14px;color:var(--muted);text-align:left;line-height:1.55}
+
+.media{display:grid;grid-template-columns:1fr;gap:26px;align-items:center;margin-top:30px}@media(min-width:800px){.media{grid-template-columns:1fr 1fr}}.photo{display:block;width:100%;height:auto;border-radius:18px;border:1px solid var(--line)}figure.ph{margin:0}figure.ph figcaption{font-size:13px;color:var(--muted);margin-top:10px;text-align:center}
 </style>
 </head>
 <body>
@@ -129,59 +131,50 @@ form.book .cta{width:100%;text-align:center;margin-top:6px}
 <a href="/faq">FAQ</a>
 <a href="/contact">Contact</a>
 </nav>
-<a href="#book" class="cta sm">Book Free Class</a>
+<a href="/contact" class="cta sm">Book Free Class</a>
 </div>
 </header>
-
-<section id="book">
+<section id="why" style="background:var(--soft)">
 <div class="wrap">
-<div class="eyebrow" style="color:#ff6b61">Contact</div>
-<h2>Get in touch.</h2>
-<p class="lead">Book a free 30-minute trial class or ask us anything. A tutor will be in touch within 24 hours.</p>
-<div class="formwrap">
-<div class="contactside">
-<p>Prefer to reach us directly?</p>
-<p>Call or text anytime: <a href="tel:+16473894958">(647) 389-4958</a></p>
-<p style="margin-top:22px;font-size:14px;color:rgba(255,255,255,.6)">Classes run Monday to Friday, 4pm to 9pm, and anytime on weekends (all times Eastern). Online across Canada.</p>
+<div class="eyebrow">Why Winny French?</div>
+<h2>Four reasons learners choose us.</h2>
+<div class="cards">
+<div class="card">
+<div class="ic">Affordability</div>
+<h3>Just $25 an hour</h3>
+<p>Classes from just <span class="price">$25</span> for a full hour, compared to typical online tutors charging up to $70 per hour.</p>
 </div>
-<form class="book" id="bookForm">
-<input type="hidden" name="access_key" value="0216383f-c37e-45cb-87e1-48988cbb0d50">
-<input type="hidden" name="subject" value="New free trial request from Winny French (Contact page)">
-<input type="hidden" name="from_name" value="Winny French Website">
-<input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
-<div class="row">
-<div class="field"><label for="fn">First name</label><input id="fn" name="First name" required></div>
-<div class="field"><label for="ln">Last name</label><input id="ln" name="Last name" required></div>
+<div class="card">
+<div class="ic">Attention</div>
+<h3>Small by design</h3>
+<p>Classes of up to only three learners, so each person gets real attention plus the chance to practice through conversation.</p>
 </div>
-<div class="field"><label for="em">Email</label><input id="em" type="email" name="Email" required></div>
-<div class="field"><label for="ph">Phone</label><input id="ph" type="tel" name="Phone"></div>
-<div class="field"><label for="msg">Message</label><textarea id="msg" name="Message" placeholder="Tell us the learner's level and what you're hoping to work on."></textarea></div>
-<button type="submit" class="cta">Book Your Free Class</button>
-<div id="formStatus" role="status" aria-live="polite"></div>
-<p class="formnote">We reply within 24 hours. Your details are only used to arrange your class.</p>
-</form>
+<div class="card">
+<div class="ic">Engagement</div>
+<h3>Fun-filled classes</h3>
+<p>Our classes are full of fun, interactive exercises that keep learners engaged and show the excitement of a new language.</p>
+</div>
+<div class="card">
+<div class="ic">Availability</div>
+<h3>Classes every day</h3>
+<p>We are here when your schedule allows.</p>
+<div class="hours">
+<div><span>Mon to Fri</span><b>4pm to 9pm</b></div>
+<div><span>Weekends</span><b>Anytime</b></div>
+</div>
+<p style="margin-top:8px;font-size:12.5px;opacity:.7">All times Eastern</p>
+</div>
 </div>
 </div>
 </section>
-
-<script>
-const form = document.getElementById('bookForm');
-const status = document.getElementById('formStatus');
-form.addEventListener('submit', async (e) => {
-e.preventDefault();
-status.style.color = '#5b5b6b';
-status.textContent = 'Sending...';
-try {
-const res = await fetch('https://api.web3forms.com/submit', {
-method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-body: JSON.stringify(Object.fromEntries(new FormData(form)))
-});
-const data = await res.json();
-if (data.success) { form.reset(); status.style.color = '#0a8a4a'; status.textContent = 'Thank you. A tutor will be in touch within 24 hours to schedule your class.'; }
-else { status.style.color = '#E63329'; status.textContent = 'Something went wrong. Please call or text (647) 389-4958 and we will sort it out.'; }
-} catch (err) { status.style.color = '#E63329'; status.textContent = 'Something went wrong. Please call or text (647) 389-4958 and we will sort it out.'; }
-});
-</script>
+<section class="final">
+<div class="wrap">
+<div class="eyebrow" style="color:#ff6b61">Ready to start?</div>
+<h2>Try a free 30-minute class.</h2>
+<p>See if Winny French is the right fit, with no pressure and no strings attached.</p>
+<a href="/contact" class="cta">Book Your Free Class</a>
+</div>
+</section>
 <footer>
 <div class="wrap">
 <a href="/" class="logo"><span class="b" style="color:#8f8fff">Winny</span> <span class="r" style="color:#ff6b61">French</span></a>
