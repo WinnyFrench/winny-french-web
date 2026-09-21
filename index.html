@@ -179,11 +179,12 @@ footer small{opacity:.5;font-size:12.5px}
 .media{display:grid;grid-template-columns:1fr;gap:26px;align-items:center;margin-top:30px}@media(min-width:800px){.media{grid-template-columns:1fr 1fr}}.photo{display:block;width:100%;height:auto;border-radius:18px;border:1px solid var(--line)}figure.ph{margin:0}figure.ph figcaption{font-size:13px;color:var(--muted);margin-top:10px;text-align:center}
 .events{list-style:none;display:grid;grid-template-columns:1fr;gap:10px;max-width:74ch;margin-top:8px}@media(min-width:680px){.events{grid-template-columns:1fr 1fr}}.events li{position:relative;padding:11px 14px 11px 32px;background:#fff;border:1px solid var(--line);border-radius:12px;font-weight:600;font-size:14.5px}.events li::before{content:"";position:absolute;left:13px;top:16px;width:9px;height:9px;border-radius:2px;background:var(--red)}
 .langtoggle{display:inline-block;font-weight:800;font-size:14px;color:var(--navy);border:1px solid var(--line);border-radius:999px;padding:7px 13px;text-decoration:none}.langtoggle:hover{background:var(--soft)}
+.req{color:var(--red);font-weight:800}
 </style>
 <script type="application/ld+json">
 {
 "@context": "https://schema.org",
-"@type": "EducationalOrganization","aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"30","bestRating":"5"},"sameAs":["https://www.instagram.com/winnyfrenchcanada","https://www.linkedin.com/company/winny-french","https://www.facebook.com/winnyfrench","https://www.trustpilot.com/review/winnyfrench.com"],
+"@type": "EducationalOrganization",
 "name": "Winny French",
 "url": "https://winnyfrench.com/",
 "description": "Affordable, high-quality online French tutoring for students and adult learners across Ontario and Canada, from just $25 per hour. Free 30-minute trial class.",
@@ -306,10 +307,8 @@ footer small{opacity:.5;font-size:12.5px}
 <div class="eyebrow">In the community</div>
 <h2>Out in the community across Ontario.</h2>
 <p class="lead">Winny French for Kids is a proud community sponsor at schools, festivals, and events across Ontario, meeting families in person and sharing affordable French tutoring.</p>
-<h3 style="font-size:19px;margin:24px 0 8px">Events we've sponsored and joined across Ontario</h3>
+<h3 style="font-size:19px;margin:24px 0 8px">Events we have proudly sponsored</h3>
 <ul class="events">
-<li>York Region Education Services Volunteer Fair</li>
-<li>Brampton Latin Fest</li>
 <li>OAPCE, the Ontario Association of Parents in Catholic Education</li>
 <li>Michael Cranny Fun Fair (YRDSB school)</li>
 <li>Agincourt Church of God Annual Free Community BBQ</li>
@@ -442,11 +441,11 @@ footer small{opacity:.5;font-size:12.5px}
 <input type="hidden" name="from_name" value="Winny French Website">
 <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
 <div class="row">
-<div class="field"><label for="fn">First name</label><input id="fn" name="First name" required></div>
-<div class="field"><label for="ln">Last name</label><input id="ln" name="Last name" required></div>
+<div class="field"><label for="fn">First name <span class="req">*</span></label><input id="fn" name="First name" required></div>
+<div class="field"><label for="ln">Last name <span class="req">*</span></label><input id="ln" name="Last name" required></div>
 </div>
-<div class="field"><label for="em">Email</label><input id="em" type="email" name="Email" required></div>
-<div class="field"><label for="ph">Phone</label><input id="ph" type="tel" name="Phone"></div>
+<div class="field"><label for="em">Email <span class="req">*</span></label><input id="em" type="email" name="Email" required></div>
+<div class="field"><label for="ph">Phone <span class="req">*</span></label><input id="ph" type="tel" name="Phone" required></div>
 <div class="field"><label for="hd">How did you hear about us?</label>
 <select id="hd" name="How did you hear about us">
 <option value="">Select one</option>
@@ -460,7 +459,7 @@ footer small{opacity:.5;font-size:12.5px}
 <div class="field"><label for="msg">Message</label><textarea id="msg" name="Message" placeholder="Tell us the learner's level and what you're hoping to work on."></textarea></div>
 <button type="submit" class="cta">Book Your Free Class</button>
 <div id="formStatus" role="status" aria-live="polite"></div>
-<p class="formnote">We reply within 24 hours. Your details are only used to arrange your trial class.</p>
+<p class="formnote">Fields marked * are required. We reply within 24 hours. Your details are only used to arrange your trial class.</p>
 </form>
 </div>
 </div>

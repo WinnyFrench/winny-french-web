@@ -186,6 +186,7 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:14px;width:11px;heig
 .langtoggle:hover{background:var(--soft)}
 .tutor .tag{display:inline-block;margin:2px 0 8px;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#0a8a4a;background:#e6f7ee;border-radius:999px;padding:3px 10px}
 .gbadge{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 18px;text-decoration:none;font-weight:700;color:var(--ink);font-size:15px}
+.req{color:var(--red);font-weight:800}
 </style>
 <script type="application/ld+json">
 {
@@ -351,11 +352,11 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:14px;width:11px;heig
 <input type="hidden" name="from_name" value="Site Winny French (FR)">
 <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
 <div class="row">
-<div class="field"><label for="fn">Prénom</label><input id="fn" name="Prénom" required></div>
-<div class="field"><label for="ln">Nom</label><input id="ln" name="Nom" required></div>
+<div class="field"><label for="fn">Prénom <span class="req">*</span></label><input id="fn" name="Prénom" required></div>
+<div class="field"><label for="ln">Nom <span class="req">*</span></label><input id="ln" name="Nom" required></div>
 </div>
-<div class="field"><label for="em">Courriel</label><input id="em" type="email" name="Courriel" required></div>
-<div class="field"><label for="ph">Téléphone</label><input id="ph" type="tel" name="Téléphone"></div>
+<div class="field"><label for="em">Courriel <span class="req">*</span></label><input id="em" type="email" name="Courriel" required></div>
+<div class="field"><label for="ph">Téléphone <span class="req">*</span></label><input id="ph" type="tel" name="Téléphone" required></div>
 <div class="field"><label for="hd">Comment avez-vous entendu parler de nous?</label>
 <select id="hd" name="Comment avez-vous entendu parler de nous">
 <option value="">Choisissez une réponse</option>
@@ -370,7 +371,7 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:14px;width:11px;heig
 <div class="field"><label for="msg">Message</label><textarea id="msg" name="Message" placeholder="Indiquez le niveau de l'élève et ce sur quoi vous aimeriez travailler."></textarea></div>
 <button type="submit" class="cta">Réservez votre cours d'essai</button>
 <div id="formStatus" role="status" aria-live="polite"></div>
-<p class="formnote">Nous répondons dans les 24 heures. Vos renseignements servent uniquement à organiser votre cours.</p>
+<p class="formnote">Les champs marqués * sont obligatoires. Nous répondons dans les 24 heures. Vos renseignements servent uniquement à organiser votre cours.</p>
 </form>
 </div>
 </div>
