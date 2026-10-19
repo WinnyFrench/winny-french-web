@@ -52,7 +52,7 @@ nav.links a:hover{color:var(--ink)}
 .hero .reassure{margin-top:16px;font-size:14px;color:rgba(255,255,255,.62)}
 section{padding:58px 0}
 .eyebrow{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.14em;color:var(--red);margin-bottom:12px}
-h2{font-size:clamp(24px,4vw,34px);letter-spacing:-.02em;font-weight:800;line-height:1.12;margin-bottom:16px}
+h1.ptitle,h2{font-size:clamp(24px,4vw,34px);letter-spacing:-.02em;font-weight:800;line-height:1.12;margin-bottom:16px}
 h3{font-size:19px;margin:22px 0 8px}
 .lead{color:var(--muted);font-size:clamp(16px,2vw,18px);max-width:66ch;margin-bottom:14px}
 .prose p{color:var(--muted);max-width:70ch;margin-bottom:14px}
@@ -92,13 +92,13 @@ footer small{opacity:.5;font-size:12.5px}
 form.book{background:#fff;color:var(--ink);border-radius:22px;padding:28px}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .field{margin-bottom:16px}
-label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:#1c1c28}
 input,select,textarea{width:100%;font:inherit;padding:12px 14px;border:1px solid #dfe2ea;border-radius:10px;background:#fff;color:var(--ink)}
 input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(27,27,230,.14)}
 textarea{min-height:96px;resize:vertical}
 form.book .cta{width:100%;text-align:center;margin-top:6px}
 .formnote{font-size:12.5px;color:var(--muted);margin-top:12px;text-align:center}
-.hp{position:absolute;left:-9999px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 #formStatus{margin-top:14px;font-weight:600;font-size:15px}
 .contactside p{color:rgba(255,255,255,.82);margin-bottom:14px}
 .contactside a{color:#9d9dff;font-weight:600}
@@ -125,7 +125,17 @@ form.book .cta{width:100%;text-align:center;margin-top:6px}
 {
 "@type": "Question",
 "name": "How much does a French tutor cost at Winny French?",
-"acceptedAnswer": { "@type": "Answer", "text": "Small group classes are $25 per student, with up to three students per class. One-on-one classes are $35 each, or $30 each when you book more than one a week. Every student can start with a free 30-minute trial class." }
+"acceptedAnswer": { "@type": "Answer", "text": "Small group classes are $25 per student per hour, with up to three students per class. One-on-one classes are $35 per hour, or $30 per hour each when a family takes more than one one-on-one class a week. Every student can start with a free 30-minute trial class." }
+},
+{
+"@type": "Question",
+"name": "How does billing work?",
+"acceptedAnswer": { "@type": "Answer", "text": "There is no registration fee. We expect payment at the end of the month, and we'll send you an invoice. We take e-transfer to accounting@winnyfrench.com. If a payment is overdue by a few days after you receive your invoice, there's an extra $15 late fee. We'll make sure to send reminders so you can avoid the fee." }
+},
+{
+"@type": "Question",
+"name": "What if I need to cancel a class?",
+"acceptedAnswer": { "@type": "Answer", "text": "You can cancel any time before the class starts, and you won't be charged for that class. A no-show is charged the full class rate, because the family is paying for the tutor's time." }
 },
 {
 "@type": "Question",
@@ -175,6 +185,7 @@ form.book .cta{width:100%;text-align:center;margin-top:6px}
 <a href="/why-us">Why Us</a>
 <a href="/tutors">Tutors</a>
 <a href="/programs">Programs</a>
+<a href="/pricing">Pricing</a>
 <a href="/about">About</a>
 <a href="/blog">Blog</a>
 <a href="/faq">FAQ</a>
@@ -186,11 +197,19 @@ form.book .cta{width:100%;text-align:center;margin-top:6px}
 <section id="faq">
 <div class="wrap">
 <div class="eyebrow">FAQ</div>
-<h2>French tutoring questions, answered.</h2>
+<h1 class="ptitle">French tutoring questions, answered.</h1>
 <div class="faq-list">
 <details>
 <summary>How much does a French tutor cost at Winny French?</summary>
-<p>Small group classes are $25 per student, with up to three students per class. One-on-one classes are $35 each, or $30 each when you book more than one a week. Every student can start with a free 30-minute trial class.</p>
+<p>Small group classes are $25 per student per hour, with up to three students per class. One-on-one classes are $35 per hour, or $30 per hour each when a family takes more than one one-on-one class a week. Every student can start with a free 30-minute trial class.</p>
+</details>
+<details>
+<summary>How does billing work?</summary>
+<p>There is no registration fee. We expect payment at the end of the month, and we'll send you an invoice. We take e-transfer to accounting@winnyfrench.com. If a payment is overdue by a few days after you receive your invoice, there's an extra $15 late fee. We'll make sure to send reminders so you can avoid the fee.</p>
+</details>
+<details>
+<summary>What if I need to cancel a class?</summary>
+<p>You can cancel any time before the class starts, and you won't be charged for that class. A no-show is charged the full class rate, because the family is paying for the tutor's time.</p>
 </details>
 <details>
 <summary>Do you offer a free trial?</summary>
@@ -221,6 +240,7 @@ form.book .cta{width:100%;text-align:center;margin-top:6px}
 <p>Classes take place over video call from wherever you are in Canada. After you book a free trial, a tutor is in touch within 24 hours to confirm the time and share the joining details.</p>
 </details>
 </div>
+<p class="lead" style="margin-top:22px">Payment, the late fee, and cancellation are spelled out on the <a href="/pricing" style="color:#1B1BE6;font-weight:700">pricing and policies</a> page.</p>
 </div>
 </section>
 <section class="final">
@@ -238,6 +258,7 @@ form.book .cta{width:100%;text-align:center;margin-top:6px}
 <a href="/why-us">Why Us</a>
 <a href="/tutors">Tutors</a>
 <a href="/programs">Programs</a>
+<a href="/pricing">Pricing</a>
 <a href="/about">About</a>
 <a href="/blog">Blog</a>
 <a href="/faq">FAQ</a>
@@ -245,7 +266,7 @@ form.book .cta{width:100%;text-align:center;margin-top:6px}
 <a href="/fr">Français</a>
 </div>
 <small>Online French tutoring across Canada &copy; Winny French</small>
-<div style="opacity:.5;font-size:12px;line-height:1.5;margin-top:8px">Winny French for Kids &middot; Corporations Canada nonprofit 1687619-6 &middot; 7 Terry View Drive, King City, Ontario, Canada, L7B 0B7</div>
+<div style="opacity:.5;font-size:12px;line-height:1.5;margin-top:8px">Winny French for Kids &middot; Corporations Canada nonprofit 1687619-6 &middot; Based in Ontario, online across Canada</div>
 </div>
 </footer>
 
