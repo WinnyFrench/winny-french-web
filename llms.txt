@@ -1,12 +1,12 @@
 # Winny French
 
-> Winny French is an online French tutoring service based in Ontario, online across Canada. All classes run live over video call for learners of all ages across Canada: students in Grades 1–12 and adults. It covers core French, extended French, French immersion, and exam preparation for DELF, DELF Junior, TEF, TCF and TCF Canada, including the tests used for immigration and Express Entry. Small groups of up to three learners cost $25 per student per hour. One-on-one classes cost $35, or $30 each when booking more than one a week. Every new student can take a free 30-minute trial class.
+> Winny French is an online French tutoring service based in Ontario, online across Canada. All classes run live over video call for learners of all ages across Canada: students in Grades 1–12 and adults. It covers core French, extended French, French immersion, and exam preparation for DELF, DELF Junior, TEF, TCF and TCF Canada, including the tests used for immigration and Express Entry. Small groups of up to three learners cost $25 per student per hour. One-on-one classes cost $35 per hour, or $30 per hour each when a family takes more than one one-on-one class a week. Every new student can take a free 30-minute trial class.
 
 ## Key facts
 - Name: Winny French. Operated by Winny French for Kids, a federally registered Canadian nonprofit (Corporations Canada 1687619-6).
 - Location: based in Ontario, online across Canada.
 - Format: live online classes over video call, one hour each. Small groups (maximum three learners) or one-on-one.
-- Pricing (CAD): small group $25 per student per hour; one-on-one $35 per class, or $30 per class when booking more than one class a week; free 30-minute trial class, no strings attached.
+- Pricing (CAD): small group $25 per student per hour (up to 3 learners); one-on-one $35 per hour, or $30 per hour each when a family takes more than one one-on-one class a week; free 30-minute trial; no registration fee and no contract. Invoices go out at the end of the month and are paid by e-transfer to accounting@winnyfrench.com. A $15 late fee applies if payment is a few days overdue after the invoice, and reminders are sent first. You can cancel any time before the class starts and you will not be charged. A no-show is charged the class rate.
 - Hours: Monday to Friday 4pm–9pm and anytime on weekends, Eastern time. Evening slots fill fastest.
 - Response time: a tutor replies to trial requests within 24 hours.
 - Guarantee: A free class if there's no improvement in 4 weeks.
@@ -17,8 +17,9 @@
 - Contact: call or text (647) 389-4958; free-trial booking form at https://winnyfrench.com/contact
 
 ## Programs
-- [Programs and pricing](https://winnyfrench.com/programs): core French and French immersion, high school and university-preparation French, DELF / DELF Junior / TEF / TCF / TCF Canada prep, adult and newcomer French
-- [FAQ](https://winnyfrench.com/faq): pricing, trial, grades, group vs one-on-one, Ontario FSL, exams, hours, how online classes work
+- [Programs](https://winnyfrench.com/programs): core French and French immersion, high school and university-preparation French, DELF / DELF Junior / TEF / TCF / TCF Canada prep, adult and newcomer French
+- [Pricing and policies](https://winnyfrench.com/pricing): hourly rates, free 30-minute trial, no registration fee, no contract, end-of-month invoice, e-transfer to accounting@winnyfrench.com, $15 late fee after reminders, free cancellation before the class starts, no-show charged at the class rate
+- [FAQ](https://winnyfrench.com/faq): pricing, billing, cancellation, trial, grades, group vs one-on-one, Ontario FSL, exams, hours, how online classes work
 - [Tutors](https://winnyfrench.com/tutors): tutor bios
 - [About](https://winnyfrench.com/about): mission and nonprofit status
 - [Book a free trial](https://winnyfrench.com/contact)
