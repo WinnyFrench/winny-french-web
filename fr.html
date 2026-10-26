@@ -349,7 +349,7 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:14px;width:11px;heig
 <p>Appelez ou textez en tout temps : <a href="tel:+16473894958">(647) 389-4958</a></p>
 <p style="margin-top:22px;font-size:14px;color:rgba(255,255,255,.6)">Cours du lundi au vendredi, de 16 h à 21 h, et la fin de semaine en tout temps (heure de l'Est). Offert aux élèves des écoles de langue française partout au Canada.</p>
 </div>
-<form class="book" id="bookForm">
+<form class="book" id="bookForm" data-utm>
 <input type="hidden" name="access_key" value="0216383f-c37e-45cb-87e1-48988cbb0d50">
 <input type="hidden" name="subject" value="Nouvelle demande d'essai gratuit (page francaise Winny French)">
 <input type="hidden" name="from_name" value="Site Winny French (FR)">
@@ -372,10 +372,30 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:14px;width:11px;heig
 </select>
 </div>
 <div class="field"><label for="msg">Message</label><textarea id="msg" name="Message" placeholder="Indiquez le niveau de l'élève et ce sur quoi vous aimeriez travailler."></textarea></div>
+<input type="hidden" name="utm_source" value="">
+<input type="hidden" name="utm_medium" value="">
+<input type="hidden" name="utm_campaign" value="">
+<input type="hidden" name="utm_content" value="">
+<input type="hidden" name="utm_term" value="">
+<input type="hidden" name="landing_page" value="">
+<input type="hidden" name="referrer" value="">
 <button type="submit" class="cta">Réservez votre cours d'essai</button>
 <div id="formStatus" role="status" aria-live="polite"></div>
 <p class="formnote">Les champs marqués * sont obligatoires. Nous répondons dans les 24 heures. Vos renseignements servent uniquement à organiser votre cours.</p>
 </form>
+<script>
+/* UTM capture (P2): keeps the visit's campaign tags in sessionStorage (this tab only, cleared when it closes) and copies them into hidden fields of every form marked data-utm. */
+(function(){
+var K=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],q=new URLSearchParams(location.search),got={},s={};
+K.forEach(function(k){var v=q.get(k);if(v){got[k]=v.slice(0,100);}});
+try{if(Object.keys(got).length){got.landing_page=location.pathname;sessionStorage.setItem('wf_utm',JSON.stringify(got));}s=JSON.parse(sessionStorage.getItem('wf_utm')||'{}');}catch(e){s=got;}
+document.querySelectorAll('form[data-utm]').forEach(function(f){
+K.concat(['landing_page']).forEach(function(k){var i=f.querySelector('input[name="'+k+'"]');if(i&&s[k]){i.value=s[k];}});
+var lp=f.querySelector('input[name="landing_page"]');if(lp&&!lp.value){lp.value=location.pathname;}
+var r=f.querySelector('input[name="referrer"]');if(r&&document.referrer&&document.referrer.indexOf(location.hostname)===-1){r.value=document.referrer.slice(0,200);}
+});
+})();
+</script>
 </div>
 </div>
 </section>
@@ -429,6 +449,7 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:14px;width:11px;heig
 <a href="#tuteurs">Tuteurs</a>
 <a href="#faq">FAQ</a>
 <a href="#contact">Contact</a>
+<a href="/privacy">Confidentialité</a>
 <a href="/">English</a>
 </div>
 <div style="font-size:12px;text-transform:uppercase;letter-spacing:.1em;opacity:.5;margin-bottom:12px">Villes desservies</div>
