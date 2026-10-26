@@ -191,10 +191,8 @@ table.cost th{background:var(--navy);color:#fff}
 table.cost tr.us td{background:#eef0ff;font-weight:600}
 table.cost a{color:var(--blue)}
 </style>
-<!-- ANALYTICS (P2): paste the analytics snippet here, just before </head>, once Winston has chosen and set up the tool. -->
 </head>
 <body>
-<!-- Analytics snippet is not included. Add Cloudflare Web Analytics after Winston creates the site and provides the token. -->
 <header>
 <div class="bar">
 <a href="/" class="logo"><span class="b">Winny</span> <span class="r">French</span></a>
@@ -244,11 +242,11 @@ table.cost a{color:var(--blue)}
 <li><b>Web3Forms</b> delivers our website forms to us by email. It says form submissions are kept for a maximum of three years and then deleted, and that it uses AWS, Cloudflare and Hetzner infrastructure. See <a href="https://web3forms.com/privacy" rel="noopener">Web3Forms' privacy policy</a>.</li>
 <li><b>GitHub Pages</b> hosts the website. GitHub says it logs visitors' IP addresses for security purposes. See <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection" rel="noopener">GitHub's documentation</a>.</li>
 <li><b>Email:</b> Web3Forms delivers form submissions to our inbox at winnyfrench@outlook.com. Tuition invoices are separate: they are paid by e-transfer to accounting@winnyfrench.com.</li>
-<li><b>Analytics:</b> we plan to use Cloudflare Web Analytics, which counts visits without cookies and without browser storage. That tool is not on this website yet, so no analytics script is running today.</li>
+<li><b>Analytics:</b> we use Cloudflare Web Analytics. It is cookie-free and stores no personal data.</li>
 </ul>
 
 <h2>Cookies and similar tools</h2>
-<p>Our website doesn't set advertising or tracking cookies. When you arrive from one of our tagged links, a small script saves the campaign tags in your browser's session storage for that tab only (it's cleared when you close the tab) so they can be included if you fill in a form.</p>
+<p>Our website doesn't set advertising or tracking cookies. Cloudflare Web Analytics, which counts visits, does not set a cookie and does not store personal data. When you arrive from one of our tagged links, a small script saves the campaign tags in your browser's session storage for that tab only (it's cleared when you close the tab) so they can be included if you fill in a form.</p>
 
 <h2>How long we keep it</h2>
 <p>We keep inquiries and sign-ups for up to 2 years after our last contact with you, then delete them, unless the law requires us to keep them longer.</p>
@@ -359,5 +357,6 @@ table.cost a{color:var(--blue)}
 })();
 </script>
 
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0f710da95a134018a2f9a80e820a8de6"}'></script>
 </body>
 </html>
