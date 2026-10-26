@@ -22,10 +22,11 @@
 </head><body>
 <header><div class="bar">
 <a href="/" class="logo"><span class="b">Winny</span> <span class="r">French</span></a>
-<nav class="links">
+<button type="button" class="navtoggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span class="navtoggle-bars" aria-hidden="true"></span></button><nav class="links" id="site-nav">
 <a href="/why-us">Why Us</a>
 <a href="/tutors">Tutors</a>
-<a href="/programs">Programs</a>
+<div class="navdrop"><a href="/programs">Programs</a><button type="button" class="navdrop-btn" aria-expanded="false" aria-controls="programs-menu" aria-label="Programs menu"><span class="navdrop-chev" aria-hidden="true"></span></button><div class="navdrop-menu" id="programs-menu"><a href="/french-immersion-tutor">French Immersion Tutoring</a><a href="/tef-tcf-canada-prep">TEF &amp; TCF Canada Prep</a></div></div>
+<a href="/pricing">Pricing</a>
 <a href="/about">About</a>
 <a href="/blog">Blog</a>
 <a href="/faq">FAQ</a>
@@ -43,8 +44,8 @@
 <a class="pcard" href="/post/french-verb-tenses-explained"><span class="pdate">Jun 30, 2026</span><h2>French Verb Tenses Explained: The 6 Core Tenses With English Equivalents</h2><p>All 6 core French verb tenses explained simply: présent, passé composé, imparfait, conditionnel, futur simple, and futur proche, each with its English equivalent and examples.</p><span class="more">Read more &rarr;</span></a>
 <a class="pcard" href="/post/passe-compose"><span class="pdate">Jun 29, 2026</span><h2>Passé Composé: How to Form the French Past Tense (With Examples)</h2><p>Learn the passé composé, the French past tense for completed actions. How to form it with avoir and être, past participles, examples, and passé composé vs imparfait.</p><span class="more">Read more &rarr;</span></a>
 <a class="pcard" href="/post/french-conjugation-er-ir-re"><span class="pdate">Jun 29, 2026</span><h2>How to Conjugate French Verbs: -ER, -IR, and -RE Verbs for Beginners</h2><p>How to conjugate regular French verbs in the present tense. Clear -ER, -IR, and -RE endings with examples (parler, finir, vendre), plus what a conjugation really is.</p><span class="more">Read more &rarr;</span></a>
-<a class="pcard" href="/post/is-a-french-tutor-worth-it-vs-duolingo-and-apps-an-honest-answer"><span class="pdate">Jun 10, 2026</span><h2>Is a French Tutor Worth It vs. Duolingo and Apps? An Honest Answer</h2><p>Duolingo is great until it isn&#x27;t. An honest look at when apps are enough, when a tutor is worth it, and what $25/hour actually buys you.</p><span class="more">Read more &rarr;</span></a>
-<a class="pcard" href="/post/how-much-does-a-french-tutor-cost-in-canada-2026-price-guide"><span class="pdate">Jun 10, 2026</span><h2>How Much Does a French Tutor Cost in Canada? (2026 Price Guide)</h2><p>What French tutoring really costs in Canada in 2026: per-hour rates for tutors, apps and platforms compared, and how Winny French keeps it at $25/hour.</p><span class="more">Read more &rarr;</span></a>
+<a class="pcard" href="/post/is-a-french-tutor-worth-it-vs-duolingo-and-apps-an-honest-answer"><span class="pdate">Jun 10, 2026</span><h2>Is a French Tutor Worth It vs. Duolingo and Apps? An Honest Answer</h2><p>Duolingo is great until it isn&#x27;t. An honest look at when apps are enough, when a tutor is worth it, and what $25 an hour in a small group actually buys you.</p><span class="more">Read more &rarr;</span></a>
+<a class="pcard" href="/post/how-much-does-a-french-tutor-cost-in-canada-2026-price-guide"><span class="pdate">Jun 10, 2026</span><h2>How Much Does a French Tutor Cost in Canada? (2026 Price Guide)</h2><p>What French tutoring really costs in Canada in 2026: per-hour rates for tutors, apps and platforms compared. Winny French small groups are $25 per student per hour, and one-on-one is $35 per hour, or $30 per hour each when a family takes more than one one-on-one class a week.</p><span class="more">Read more &rarr;</span></a>
 <a class="pcard" href="/post/struggling-with-french-immersion-a-parent-s-guide-to-helping-your-child"><span class="pdate">Jun 10, 2026</span><h2>Struggling with French Immersion? A Parent&#x27;s Guide to Helping Your Child</h2><p>Your child is struggling in French immersion and you don&#x27;t speak French. A parent&#x27;s guide to what actually helps, from tutors who work with immersion kids.</p><span class="more">Read more &rarr;</span></a>
 <a class="pcard" href="/post/french-for-express-entry-how-many-crs-points-you-can-earn-in-2026"><span class="pdate">Jun 10, 2026</span><h2>French for Express Entry: How Many CRS Points You Can Earn in 2026</h2><p>French can add up to 74 CRS points to your Express Entry profile in 2026. Here is exactly how the points work and how long it takes to reach NCLC 7.</p><span class="more">Read more &rarr;</span></a>
 <a class="pcard" href="/post/tef-canada-and-tcf-canada-a-complete-prep-guide-for-immigration-applicants"><span class="pdate">Jun 10, 2026</span><h2>TEF Canada and TCF Canada: A Complete Prep Guide for Immigration Applicants</h2><p>TEF Canada vs TCF Canada explained: format, scoring, CLB levels and a realistic prep plan from tutors who coach immigration applicants to their target score.</p><span class="more">Read more &rarr;</span></a>
@@ -56,12 +57,91 @@
 <a href="/why-us">Why Us</a>
 <a href="/tutors">Tutors</a>
 <a href="/programs">Programs</a>
+<a href="/pricing">Pricing</a>
 <a href="/about">About</a>
 <a href="/blog">Blog</a>
 <a href="/faq">FAQ</a>
 <a href="/contact">Contact</a>
+<a href="/privacy">Privacy</a>
 </div>
 <small>Online French tutoring across Canada &copy; Winny French</small>
-<div style="opacity:.5;font-size:12px;line-height:1.5;margin-top:8px">Winny French for Kids &middot; Corporations Canada nonprofit 1687619-6 &middot; 7 Terry View Drive, King City, Ontario, Canada, L7B 0B7</div>
+<div style="opacity:.5;font-size:12px;line-height:1.5;margin-top:8px">Winny French for Kids &middot; Corporations Canada nonprofit 1687619-6 &middot; Based in Ontario, online across Canada</div>
 </div></footer>
+<script>
+/* wf-nav-script */
+(function(){
+  var nav=document.querySelector("header nav.links");
+  var toggle=document.querySelector("header .navtoggle");
+  var drop=document.querySelector("header .navdrop");
+  if(!nav||!drop)return;
+  var btn=drop.querySelector(".navdrop-btn");
+  var wide=window.matchMedia("(min-width:900px)");
+  var fromPointer=false;
+  var blockFocusOpen=false;
+  function setDrop(open){
+    drop.classList.toggle("is-open",open);
+    if(open)drop.classList.remove("is-dismissed");
+    if(btn)btn.setAttribute("aria-expanded",open?"true":"false");
+  }
+  function setNav(open){
+    nav.classList.toggle("is-open",open);
+    if(toggle){
+      toggle.setAttribute("aria-expanded",open?"true":"false");
+      toggle.setAttribute("aria-label",open?"Close menu":"Menu");
+    }
+    if(!open)setDrop(false);
+  }
+  if(btn){
+    btn.addEventListener("pointerdown",function(){fromPointer=true;});
+    btn.addEventListener("click",function(e){
+      e.stopPropagation();
+      fromPointer=false;
+      setDrop(!drop.classList.contains("is-open"));
+    });
+  }
+  if(toggle)toggle.addEventListener("click",function(e){
+    e.stopPropagation();
+    setNav(!nav.classList.contains("is-open"));
+  });
+  drop.addEventListener("focusin",function(){
+    if(fromPointer){fromPointer=false;return;}
+    if(blockFocusOpen)return;
+    setDrop(true);
+  });
+  drop.addEventListener("focusout",function(e){
+    if(drop.contains(e.relatedTarget))return;
+    setDrop(false);
+  });
+  drop.addEventListener("mouseenter",function(){
+    if(!wide.matches||drop.classList.contains("is-dismissed")||!btn)return;
+    btn.setAttribute("aria-expanded","true");
+  });
+  drop.addEventListener("mouseleave",function(){
+    drop.classList.remove("is-dismissed");
+    if(btn&&!drop.classList.contains("is-open")&&!drop.contains(document.activeElement)){
+      btn.setAttribute("aria-expanded","false");
+    }
+  });
+  document.addEventListener("click",function(e){
+    if(!drop.contains(e.target))setDrop(false);
+  });
+  document.addEventListener("keydown",function(e){
+    if(e.key!=="Escape")return;
+    if(drop.classList.contains("is-open")){
+      blockFocusOpen=true;
+      setDrop(false);
+      drop.classList.add("is-dismissed");
+      if(btn)btn.focus();
+      blockFocusOpen=false;
+      return;
+    }
+    if(nav.classList.contains("is-open")&&toggle&&getComputedStyle(toggle).display!=="none"){
+      setNav(false);
+      toggle.focus();
+    }
+  });
+})();
+</script>
+
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0f710da95a134018a2f9a80e820a8de6"}'></script>
 </body></html>

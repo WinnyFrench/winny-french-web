@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Winny French | Online French Tutoring Across Canada</title>
-<meta name="description" content="Affordable, high-quality online French tutoring for learners of all ages across Canada, from just $25 per hour. Book a free 30-minute trial class.">
+<title>Online French Tutor in Canada | Free Trial, from $25 | Winny French</title>
+<meta name="description" content="Online French tutoring for Grades 1–12 and adults across Canada: core French, immersion, DELF and TEF/TCF Canada prep. Groups are $25 per student per hour. Free 30-min trial.">
 <meta name="theme-color" content="#0B0B28">
 <link rel="canonical" href="https://winnyfrench.com/">
 <link rel="alternate" hreflang="en-CA" href="https://winnyfrench.com/">
 <link rel="alternate" hreflang="fr-CA" href="https://winnyfrench.com/fr">
 <link rel="alternate" hreflang="x-default" href="https://winnyfrench.com/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Winny French | Online French Tutoring Across Canada">
-<meta property="og:description" content="Affordable, high-quality online French tutoring for learners of all ages, from just $25 per hour. Book a free trial class.">
+<meta property="og:title" content="Online French Tutor in Canada | Winny French">
+<meta property="og:description" content="Small-group and one-on-one online French tutoring across Canada: school French, immersion, DELF and TEF/TCF Canada. Free 30-minute trial.">
 <meta property="og:url" content="https://winnyfrench.com/">
 <meta property="og:site_name" content="Winny French">
 <meta property="og:locale" content="en_CA">
@@ -71,15 +71,61 @@ nav.links{display:none;flex-wrap:wrap;gap:26px;font-size:15px;color:var(--muted)
 nav.links a{text-decoration:none}
 nav.links a:hover{color:var(--ink)}
 @media(min-width:900px){nav.links{display:flex}}
+/* wf-programs-nav */
+.navtoggle{display:none}
+.navdrop{position:relative;display:inline-flex;align-items:center}
+.navdrop-btn{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;margin-left:1px;padding:0;border:0;background:transparent;color:var(--muted);cursor:pointer;border-radius:6px;line-height:1}
+.navdrop-btn:hover,.navdrop.is-open>.navdrop-btn{color:var(--ink)}
+.navdrop-btn:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.navdrop-chev{display:block;width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg)}
+.navdrop.is-open>.navdrop-btn .navdrop-chev{transform:translateY(1px) rotate(225deg)}
+.navdrop-menu{display:none;flex-direction:column}
+.navdrop-menu a{display:block;padding:8px 12px;border-radius:8px;color:var(--muted);font-weight:600;text-decoration:none}
+.navdrop-menu a:hover{color:var(--ink);background:var(--soft)}
+.navdrop.is-open>.navdrop-menu{display:flex}
+@media(max-width:899px){
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;padding:12px 10px;column-gap:6px;row-gap:8px}
+.bar>.logo{white-space:nowrap;flex:0 0 auto;margin-right:auto;order:1;font-size:22px}
+.navtoggle{display:inline-flex;align-items:center;justify-content:center;order:2;flex:0 0 auto;margin:0;width:34px;height:34px;padding:0;color:var(--navy);background:#fff;border:1px solid var(--line);border-radius:10px;cursor:pointer}
+.navtoggle:hover{background:var(--soft)}
+.navtoggle:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.navtoggle-bars{display:block;width:16px;height:2px;background:currentColor;border-radius:1px;position:relative}
+.navtoggle-bars::before,.navtoggle-bars::after{content:"";position:absolute;left:0;width:16px;height:2px;background:currentColor;border-radius:1px}
+.navtoggle-bars::before{top:-5px}
+.navtoggle-bars::after{top:5px}
+.navtoggle[aria-expanded="true"] .navtoggle-bars{background:transparent}
+.navtoggle[aria-expanded="true"] .navtoggle-bars::before{top:0;transform:rotate(45deg)}
+.navtoggle[aria-expanded="true"] .navtoggle-bars::after{top:0;transform:rotate(-45deg)}
+.bar>:last-child{order:3;flex:0 0 auto}
+.bar>div{gap:6px !important}
+.bar .cta.sm{padding:8px 10px;font-size:14px}
+.bar .langtoggle{padding:5px 8px;font-size:13px}
+nav.links{order:4;flex-basis:100%}
+nav.links.is-open{display:flex;flex-direction:column;align-items:flex-start;gap:0;width:100%;padding:4px 0 8px;margin-top:4px;border-top:1px solid var(--line)}
+nav.links.is-open>a{padding:10px 0}
+nav.links.is-open .navdrop{flex-wrap:wrap;width:100%;padding:10px 0}
+nav.links.is-open .navdrop-menu{flex-basis:100%;padding:2px 0 0 14px}
+nav.links.is-open .navdrop-menu a{padding:8px 0}
+}
+@media(min-width:900px){
+.navdrop:hover>.navdrop-btn{color:var(--ink)}
+.navdrop:hover>.navdrop-btn .navdrop-chev,.navdrop.is-open>.navdrop-btn .navdrop-chev{transform:translateY(1px) rotate(225deg)}
+.navdrop:hover>.navdrop-menu,.navdrop.is-open>.navdrop-menu{display:flex;position:absolute;top:100%;left:0;z-index:60;min-width:248px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(20,20,40,.08);padding:6px}
+.navdrop.is-dismissed:hover>.navdrop-menu{display:none}
+.navdrop.is-dismissed:hover>.navdrop-btn .navdrop-chev{transform:translateY(-2px) rotate(45deg)}
+.navdrop-menu a{white-space:nowrap}
+.navdrop-menu::before{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
+}
+
 
 /* hero */
 .hero{background:radial-gradient(120% 130% at 82% 0%,#2a2ae6 0%,#0b0b28 58%);color:#fff;position:relative;overflow:hidden}
 .hero .wrap{padding-top:78px;padding-bottom:88px}
 .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);color:#fff;font-weight:700;font-size:13px;padding:9px 15px;border-radius:999px;margin-bottom:22px}
 .badge .dot{width:8px;height:8px;border-radius:50%;background:#5cf5b0}
-.hero h1{font-size:clamp(38px,7vw,72px);line-height:1.03;letter-spacing:-.03em;font-weight:800;max-width:14ch;margin-bottom:20px}
+.hero h1{font-size:clamp(34px,5.6vw,60px);line-height:1.05;letter-spacing:-.03em;font-weight:800;max-width:14em;margin-bottom:20px}
 .hero h1 .b{color:#9d9dff}.hero h1 .r{color:#ff6b61}
-.hero p.sub{font-size:clamp(17px,2.4vw,22px);color:rgba(255,255,255,.82);max-width:34ch;margin-bottom:30px}
+.hero p.sub{font-size:clamp(17px,2.4vw,22px);color:rgba(255,255,255,.82);max-width:62ch;margin-bottom:30px}
 .hero .reassure{margin-top:18px;font-size:14px;color:rgba(255,255,255,.62)}
 
 /* sections */
@@ -155,13 +201,13 @@ h2{font-size:clamp(28px,4.4vw,40px);letter-spacing:-.02em;font-weight:800;line-h
 form.book{background:#fff;color:var(--ink);border-radius:22px;padding:28px}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .field{margin-bottom:16px}
-label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:#1c1c28}
 input,select,textarea{width:100%;font:inherit;padding:12px 14px;border:1px solid #dfe2ea;border-radius:10px;background:#fff;color:var(--ink)}
 input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(27,27,230,.14)}
 textarea{min-height:96px;resize:vertical}
 form.book .cta{width:100%;text-align:center;margin-top:6px}
 .formnote{font-size:12.5px;color:var(--muted);margin-top:12px;text-align:center}
-.hp{position:absolute;left:-9999px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 #formStatus{margin-top:14px;font-weight:600;font-size:15px}
 .contactside p{color:rgba(255,255,255,.82);margin-bottom:14px}
 .contactside a{color:#9d9dff;font-weight:600}
@@ -179,30 +225,76 @@ footer small{opacity:.5;font-size:12.5px}
 .media{display:grid;grid-template-columns:1fr;gap:26px;align-items:center;margin-top:30px}@media(min-width:800px){.media{grid-template-columns:1fr 1fr}}.photo{display:block;width:100%;height:auto;border-radius:18px;border:1px solid var(--line)}figure.ph{margin:0}figure.ph figcaption{font-size:13px;color:var(--muted);margin-top:10px;text-align:center}
 .events{list-style:none;display:grid;grid-template-columns:1fr;gap:10px;max-width:74ch;margin-top:8px}@media(min-width:680px){.events{grid-template-columns:1fr 1fr}}.events li{position:relative;padding:11px 14px 11px 32px;background:#fff;border:1px solid var(--line);border-radius:12px;font-weight:600;font-size:14.5px}.events li::before{content:"";position:absolute;left:13px;top:16px;width:9px;height:9px;border-radius:2px;background:var(--red)}
 .langtoggle{display:inline-block;font-weight:800;font-size:14px;color:var(--navy);border:1px solid var(--line);border-radius:999px;padding:7px 13px;text-decoration:none}.langtoggle:hover{background:var(--soft)}
-.req{color:var(--red);font-weight:800}
+.req{color:#9f1d1d;font-weight:800}
 @media(min-width:800px){.media3{grid-template-columns:1fr 1fr 1fr}}
 </style>
 <script type="application/ld+json">
 {
 "@context": "https://schema.org",
 "@type": "EducationalOrganization",
+"@id": "https://winnyfrench.com/#organization",
 "name": "Winny French",
+"legalName": "Winny French for Kids",
+"alternateName": "Winny French for Kids",
 "url": "https://winnyfrench.com/",
-"description": "Affordable, high-quality online French tutoring for students and adult learners across Ontario and Canada, from just $25 per hour. Free 30-minute trial class.",
-"email": "winnyfrench@outlook.com",
+"logo": "https://winnyfrench.com/apple-touch-icon.png",
+"image": "https://winnyfrench.com/og-cover.png",
+"description": "Online French tutoring for kids and adults across Canada. Small groups of up to three from $25 per student per hour, or one-on-one at $35 per hour ($30 per hour each when a family takes more than one one-on-one class a week). Free 30-minute trial, no strings attached. Classes run Monday to Friday from 4pm to 9pm and anytime on weekends, all times Eastern. A free class if there's no improvement in 4 weeks. Based in Ontario, online across Canada. Operated by Winny French for Kids, Corporations Canada nonprofit 1687619-6.",
 "telephone": "+1-647-389-4958",
-"areaServed": [
-{ "@type": "AdministrativeArea", "name": "Ontario" },
-{ "@type": "Country", "name": "Canada" }
-],
-"knowsLanguage": ["English", "French"],
-"knowsAbout": ["Core French", "French immersion", "French as a Second Language", "DELF exam preparation", "TEF exam preparation", "TCF Canada"],
-"makesOffer": {
-"@type": "Offer",
-"priceCurrency": "CAD",
-"price": "25",
-"description": "One-hour online French tutoring class"
+"address": {
+"@type": "PostalAddress",
+"addressRegion": "ON",
+"addressCountry": "CA"
 },
+"areaServed": { "@type": "Country", "name": "Canada" },
+"knowsLanguage": ["en", "fr"],
+"knowsAbout": ["Core French", "Extended French", "French immersion", "DELF", "DELF Junior", "TEF", "TCF", "TCF Canada"],
+"priceRange": "$25–$35",
+"currenciesAccepted": "CAD",
+"openingHoursSpecification": [
+{
+"@type": "OpeningHoursSpecification",
+"dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+"opens": "16:00",
+"closes": "21:00"
+},
+{
+"@type": "OpeningHoursSpecification",
+"dayOfWeek": ["Saturday", "Sunday"],
+"opens": "00:00",
+"closes": "23:59"
+}
+],
+"makesOffer": [
+{
+"@type": "Offer",
+"name": "Small-group online French class (max 3 learners)",
+"price": "25",
+"priceCurrency": "CAD",
+"description": "One-hour online class, $25 per student per hour, groups of up to three learners."
+},
+{
+"@type": "Offer",
+"name": "One-on-one online French class",
+"price": "35",
+"priceCurrency": "CAD",
+"description": "One-hour private online class, $35 per hour."
+},
+{
+"@type": "Offer",
+"name": "One-on-one online French class, more than one one-on-one class a week",
+"price": "30",
+"priceCurrency": "CAD",
+"description": "One-hour private online class at $30 per hour each when a family takes more than one one-on-one class a week."
+},
+{
+"@type": "Offer",
+"name": "Free 30-minute trial class",
+"price": "0",
+"priceCurrency": "CAD",
+"description": "Free 30-minute trial class, no strings attached."
+}
+],
 "review": {
 "@type": "Review",
 "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
@@ -219,7 +311,17 @@ footer small{opacity:.5;font-size:12.5px}
 {
 "@type": "Question",
 "name": "How much does a French tutor cost at Winny French?",
-"acceptedAnswer": { "@type": "Answer", "text": "Small group classes are $25 per student, with up to three students per class. One-on-one classes are $35 each, or $30 each when you book more than one a week. Every student can start with a free 30-minute trial class." }
+"acceptedAnswer": { "@type": "Answer", "text": "Small group classes are $25 per student per hour, with up to three students per class. One-on-one classes are $35 per hour, or $30 per hour each when a family takes more than one one-on-one class a week. Every student can start with a free 30-minute trial class." }
+},
+{
+"@type": "Question",
+"name": "How does billing work?",
+"acceptedAnswer": { "@type": "Answer", "text": "There is no registration fee. We expect payment at the end of the month, and we'll send you an invoice. We take e-transfer to accounting@winnyfrench.com. If a payment is overdue by a few days after you receive your invoice, there's an extra $15 late fee. We'll make sure to send reminders so you can avoid the fee." }
+},
+{
+"@type": "Question",
+"name": "What if I need to cancel a class?",
+"acceptedAnswer": { "@type": "Answer", "text": "You can cancel any time before the class starts, and you won't be charged for that class. A no-show is charged the full class rate, because the family is paying for the tutor's time." }
 },
 {
 "@type": "Question",
@@ -267,10 +369,11 @@ footer small{opacity:.5;font-size:12.5px}
 <header>
 <div class="bar">
 <a href="#top" class="logo"><span class="b">Winny</span> <span class="r">French</span></a>
-<nav class="links">
+<button type="button" class="navtoggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span class="navtoggle-bars" aria-hidden="true"></span></button><nav class="links" id="site-nav">
 <a href="/why-us">Why Us</a>
 <a href="/tutors">Tutors</a>
-<a href="/programs">Programs</a>
+<div class="navdrop"><a href="/programs">Programs</a><button type="button" class="navdrop-btn" aria-expanded="false" aria-controls="programs-menu" aria-label="Programs menu"><span class="navdrop-chev" aria-hidden="true"></span></button><div class="navdrop-menu" id="programs-menu"><a href="/french-immersion-tutor">French Immersion Tutoring</a><a href="/tef-tcf-canada-prep">TEF &amp; TCF Canada Prep</a></div></div>
+<a href="/pricing">Pricing</a>
 <a href="/about">About</a>
 <a href="/blog">Blog</a>
 <a href="/faq">FAQ</a>
@@ -285,9 +388,9 @@ footer small{opacity:.5;font-size:12.5px}
 <!-- HERO -->
 <section class="hero" style="padding:0">
 <div class="wrap">
-<span class="badge"><span class="dot"></span> Improvement in 4 weeks, or a free lesson</span>
-<h1><span class="b">Online French</span> <span class="r">tutoring</span> that clicks.</h1>
-<p class="sub">Affordable, high-quality French help for learners of all ages across Canada, from just $25/hour.</p>
+<span class="badge"><span class="dot"></span> A free class if there's no improvement in 4 weeks</span>
+<h1><span class="b">Online French</span> <span class="r">tutoring</span> for kids and adults across Canada</h1>
+<p class="sub">French tutoring that clicks. Small groups of up to three are $25 per student per hour. One-on-one is $35 per hour, or $30 per hour each when a family takes more than one one-on-one class a week. Free 30-minute trial, no strings attached.</p>
 <a href="#contact" class="cta light">Book Your Free Class</a>
 <p class="reassure">Free 30-minute trial. No strings attached. Classes 7 days a week.</p>
 </div>
@@ -298,7 +401,7 @@ footer small{opacity:.5;font-size:12.5px}
 <div class="wrap">
 <div class="eyebrow">About Us</div>
 <h2>Making French tutoring accessible for every learner.</h2>
-<p class="lead">Winny French was founded to support students and families by making French tutoring more accessible. Our mission is simple: to provide affordable, high-quality language support outside the classroom, while creating meaningful employment for university students as tutors. With classes starting at just <span class="price">$25/hour</span>, what began as a small initiative to give back has grown into a nation-wide service, helping learners across the country strengthen their French.</p>
+<p class="lead">Winny French was founded to support students and families by making French tutoring more accessible. Our mission is simple: to provide affordable, high-quality language support outside the classroom, while creating meaningful employment for university students as tutors. With group classes starting at just <span class="price">$25/hour</span>, what began as a small initiative to give back has grown into a nation-wide service, helping learners across the country strengthen their French.</p>
 </div>
 </section>
 
@@ -334,8 +437,8 @@ footer small{opacity:.5;font-size:12.5px}
 <div class="cards">
 <div class="card">
 <div class="ic">Affordability</div>
-<h3>Just $25 an hour</h3>
-<p>Classes from just <span class="price">$25</span> for a full hour, compared to typical online tutors charging up to $70 per hour.</p>
+<h3>Group classes from $25 an hour</h3>
+<p>Small groups from <span class="price">$25</span> per student for a full hour, compared to typical online tutors charging up to $70 per hour. One-on-one is $35 per hour.</p>
 </div>
 <div class="card">
 <div class="ic">Attention</div>
@@ -438,11 +541,11 @@ footer small{opacity:.5;font-size:12.5px}
 <p>Call or text anytime: <a href="tel:+16473894958">(647) 389-4958</a></p>
 <p style="margin-top:22px;font-size:14px;color:rgba(255,255,255,.6)">Classes run Monday to Friday, 4pm to 9pm, and anytime on weekends (all times Eastern). Open to students and adult learners across Canada.</p>
 </div>
-<form class="book" id="bookForm">
+<form class="book" id="bookForm" data-utm>
 <input type="hidden" name="access_key" value="0216383f-c37e-45cb-87e1-48988cbb0d50">
 <input type="hidden" name="subject" value="New free trial request from Winny French">
 <input type="hidden" name="from_name" value="Winny French Website">
-<input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+<div class="hp" aria-hidden="true"><label for="botcheck">Leave this field empty</label><input id="botcheck" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></div>
 <div class="row">
 <div class="field"><label for="fn">First name <span class="req">*</span></label><input id="fn" name="First name" required></div>
 <div class="field"><label for="ln">Last name <span class="req">*</span></label><input id="ln" name="Last name" required></div>
@@ -460,10 +563,30 @@ footer small{opacity:.5;font-size:12.5px}
 </select>
 </div>
 <div class="field"><label for="msg">Message</label><textarea id="msg" name="Message" placeholder="Tell us the learner's level and what you're hoping to work on."></textarea></div>
+<input type="hidden" name="utm_source" value="">
+<input type="hidden" name="utm_medium" value="">
+<input type="hidden" name="utm_campaign" value="">
+<input type="hidden" name="utm_content" value="">
+<input type="hidden" name="utm_term" value="">
+<input type="hidden" name="landing_page" value="">
+<input type="hidden" name="referrer" value="">
 <button type="submit" class="cta">Book Your Free Class</button>
 <div id="formStatus" role="status" aria-live="polite"></div>
 <p class="formnote">Fields marked * are required. We reply within 24 hours. Your details are only used to arrange your trial class.</p>
 </form>
+<script>
+/* UTM capture (P2): keeps the visit's campaign tags in sessionStorage (this tab only, cleared when it closes) and copies them into hidden fields of every form marked data-utm. */
+(function(){
+var K=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],q=new URLSearchParams(location.search),got={},s={};
+K.forEach(function(k){var v=q.get(k);if(v){got[k]=v.slice(0,100);}});
+try{if(Object.keys(got).length){got.landing_page=location.pathname;sessionStorage.setItem('wf_utm',JSON.stringify(got));}s=JSON.parse(sessionStorage.getItem('wf_utm')||'{}');}catch(e){s=got;}
+document.querySelectorAll('form[data-utm]').forEach(function(f){
+K.concat(['landing_page']).forEach(function(k){var i=f.querySelector('input[name="'+k+'"]');if(i&&s[k]){i.value=s[k];}});
+var lp=f.querySelector('input[name="landing_page"]');if(lp&&!lp.value){lp.value=location.pathname;}
+var r=f.querySelector('input[name="referrer"]');if(r&&document.referrer&&document.referrer.indexOf(location.hostname)===-1){r.value=document.referrer.slice(0,200);}
+});
+})();
+</script>
 </div>
 </div>
 </section>
@@ -476,7 +599,15 @@ footer small{opacity:.5;font-size:12.5px}
 <div class="faq-list">
 <details>
 <summary>How much does a French tutor cost at Winny French?</summary>
-<p>Small group classes are $25 per student, with up to three students per class. One-on-one classes are $35 each, or $30 each when you book more than one a week. Every student can start with a free 30-minute trial class.</p>
+<p>Small group classes are $25 per student per hour, with up to three students per class. One-on-one classes are $35 per hour, or $30 per hour each when a family takes more than one one-on-one class a week. Every student can start with a free 30-minute trial class.</p>
+</details>
+<details>
+<summary>How does billing work?</summary>
+<p>There is no registration fee. We expect payment at the end of the month, and we'll send you an invoice. We take e-transfer to accounting@winnyfrench.com. If a payment is overdue by a few days after you receive your invoice, there's an extra $15 late fee. We'll make sure to send reminders so you can avoid the fee.</p>
+</details>
+<details>
+<summary>What if I need to cancel a class?</summary>
+<p>You can cancel any time before the class starts, and you won't be charged for that class. A no-show is charged the full class rate, because the family is paying for the tutor's time.</p>
 </details>
 <details>
 <summary>Do you offer a free trial?</summary>
@@ -507,6 +638,7 @@ footer small{opacity:.5;font-size:12.5px}
 <p>Classes take place over video call from wherever you are in Canada. After you book a free trial, a tutor is in touch within 24 hours to confirm the time and share the joining details.</p>
 </details>
 </div>
+<p class="lead" style="margin-top:22px">Payment, the late fee, and cancellation are spelled out on the <a href="/pricing" style="color:#1B1BE6;font-weight:700">pricing and policies</a> page.</p>
 </div>
 </section>
 
@@ -517,10 +649,12 @@ footer small{opacity:.5;font-size:12.5px}
 <a href="/why-us">Why Us</a>
 <a href="/tutors">Tutors</a>
 <a href="/programs">Programs</a>
+<a href="/pricing">Pricing</a>
 <a href="/about">About</a>
 <a href="/blog">Blog</a>
 <a href="/faq">FAQ</a>
 <a href="/contact">Contact</a>
+<a href="/privacy">Privacy</a>
 <a href="/fr">Français</a>
 </div>
 <div style="font-size:12px;text-transform:uppercase;letter-spacing:.1em;opacity:.5;margin-bottom:12px">Cities we serve</div>
@@ -537,7 +671,7 @@ footer small{opacity:.5;font-size:12.5px}
 <p style="margin:0 0 8px"><strong style="color:#fff;font-weight:700">Prince Edward Island:</strong> <a href="/french-tutor-charlottetown">Charlottetown</a></p>
 </div>
 <small>Online French tutoring across Canada &copy; Winny French</small>
-<div style="opacity:.5;font-size:12px;line-height:1.5;margin-top:8px">Winny French for Kids &middot; Corporations Canada nonprofit 1687619-6 &middot; 7 Terry View Drive, King City, Ontario, Canada, L7B 0B7</div>
+<div style="opacity:.5;font-size:12px;line-height:1.5;margin-top:8px">Winny French for Kids &middot; Corporations Canada nonprofit 1687619-6 &middot; Based in Ontario, online across Canada</div>
 </div>
 </footer>
 
@@ -575,5 +709,82 @@ status.textContent = 'Something went wrong. Please call or text (647) 389-4958 a
 }
 });
 </script>
+<script>
+/* wf-nav-script */
+(function(){
+  var nav=document.querySelector("header nav.links");
+  var toggle=document.querySelector("header .navtoggle");
+  var drop=document.querySelector("header .navdrop");
+  if(!nav||!drop)return;
+  var btn=drop.querySelector(".navdrop-btn");
+  var wide=window.matchMedia("(min-width:900px)");
+  var fromPointer=false;
+  var blockFocusOpen=false;
+  function setDrop(open){
+    drop.classList.toggle("is-open",open);
+    if(open)drop.classList.remove("is-dismissed");
+    if(btn)btn.setAttribute("aria-expanded",open?"true":"false");
+  }
+  function setNav(open){
+    nav.classList.toggle("is-open",open);
+    if(toggle){
+      toggle.setAttribute("aria-expanded",open?"true":"false");
+      toggle.setAttribute("aria-label",open?"Close menu":"Menu");
+    }
+    if(!open)setDrop(false);
+  }
+  if(btn){
+    btn.addEventListener("pointerdown",function(){fromPointer=true;});
+    btn.addEventListener("click",function(e){
+      e.stopPropagation();
+      fromPointer=false;
+      setDrop(!drop.classList.contains("is-open"));
+    });
+  }
+  if(toggle)toggle.addEventListener("click",function(e){
+    e.stopPropagation();
+    setNav(!nav.classList.contains("is-open"));
+  });
+  drop.addEventListener("focusin",function(){
+    if(fromPointer){fromPointer=false;return;}
+    if(blockFocusOpen)return;
+    setDrop(true);
+  });
+  drop.addEventListener("focusout",function(e){
+    if(drop.contains(e.relatedTarget))return;
+    setDrop(false);
+  });
+  drop.addEventListener("mouseenter",function(){
+    if(!wide.matches||drop.classList.contains("is-dismissed")||!btn)return;
+    btn.setAttribute("aria-expanded","true");
+  });
+  drop.addEventListener("mouseleave",function(){
+    drop.classList.remove("is-dismissed");
+    if(btn&&!drop.classList.contains("is-open")&&!drop.contains(document.activeElement)){
+      btn.setAttribute("aria-expanded","false");
+    }
+  });
+  document.addEventListener("click",function(e){
+    if(!drop.contains(e.target))setDrop(false);
+  });
+  document.addEventListener("keydown",function(e){
+    if(e.key!=="Escape")return;
+    if(drop.classList.contains("is-open")){
+      blockFocusOpen=true;
+      setDrop(false);
+      drop.classList.add("is-dismissed");
+      if(btn)btn.focus();
+      blockFocusOpen=false;
+      return;
+    }
+    if(nav.classList.contains("is-open")&&toggle&&getComputedStyle(toggle).display!=="none"){
+      setNav(false);
+      toggle.focus();
+    }
+  });
+})();
+</script>
+
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0f710da95a134018a2f9a80e820a8de6"}'></script>
 </body>
 </html>

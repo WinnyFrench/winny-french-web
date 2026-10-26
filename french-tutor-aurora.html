@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>French Tutor in Aurora | Online Classes from $25/hr | Winny French</title>
-<meta name="description" content="Affordable online French tutoring for Aurora students and adults. Core French, immersion, high school, and exam prep from $25/hr. Book a free 30-minute trial.">
+<title>French Tutor in Aurora | Group Classes from $25/hr | Winny French</title>
+<meta name="description" content="Affordable online French tutoring for Aurora students and adults. Core French, immersion, high school, and exam prep with group classes from $25 per student per hour. Book a free 30-minute trial.">
 <meta name="theme-color" content="#0B0B28">
 <link rel="canonical" href="https://winnyfrench.com/french-tutor-aurora">
 <meta property="og:type" content="website">
-<meta property="og:title" content="French Tutor in Aurora | Online Classes from $25/hr | Winny French">
-<meta property="og:description" content="Affordable online French tutoring for Aurora students and adults, from $25/hr. Book a free 30-minute trial.">
+<meta property="og:title" content="French Tutor in Aurora | Group Classes from $25/hr | Winny French">
+<meta property="og:description" content="Affordable online French tutoring for Aurora students and adults, with group classes from $25 per student per hour. Book a free 30-minute trial.">
 <meta property="og:url" content="https://winnyfrench.com/french-tutor-aurora">
 <meta property="og:site_name" content="Winny French">
 <meta property="og:image" content="https://winnyfrench.com/og-cover.png">
@@ -41,6 +41,52 @@ nav.links{display:none;flex-wrap:wrap;gap:26px;font-size:15px;color:var(--muted)
 nav.links a{text-decoration:none}
 nav.links a:hover{color:var(--ink)}
 @media(min-width:900px){nav.links{display:flex}}
+/* wf-programs-nav */
+.navtoggle{display:none}
+.navdrop{position:relative;display:inline-flex;align-items:center}
+.navdrop-btn{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;margin-left:1px;padding:0;border:0;background:transparent;color:var(--muted);cursor:pointer;border-radius:6px;line-height:1}
+.navdrop-btn:hover,.navdrop.is-open>.navdrop-btn{color:var(--ink)}
+.navdrop-btn:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.navdrop-chev{display:block;width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg)}
+.navdrop.is-open>.navdrop-btn .navdrop-chev{transform:translateY(1px) rotate(225deg)}
+.navdrop-menu{display:none;flex-direction:column}
+.navdrop-menu a{display:block;padding:8px 12px;border-radius:8px;color:var(--muted);font-weight:600;text-decoration:none}
+.navdrop-menu a:hover{color:var(--ink);background:var(--soft)}
+.navdrop.is-open>.navdrop-menu{display:flex}
+@media(max-width:899px){
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;padding:12px 10px;column-gap:6px;row-gap:8px}
+.bar>.logo{white-space:nowrap;flex:0 0 auto;margin-right:auto;order:1;font-size:22px}
+.navtoggle{display:inline-flex;align-items:center;justify-content:center;order:2;flex:0 0 auto;margin:0;width:34px;height:34px;padding:0;color:var(--navy);background:#fff;border:1px solid var(--line);border-radius:10px;cursor:pointer}
+.navtoggle:hover{background:var(--soft)}
+.navtoggle:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.navtoggle-bars{display:block;width:16px;height:2px;background:currentColor;border-radius:1px;position:relative}
+.navtoggle-bars::before,.navtoggle-bars::after{content:"";position:absolute;left:0;width:16px;height:2px;background:currentColor;border-radius:1px}
+.navtoggle-bars::before{top:-5px}
+.navtoggle-bars::after{top:5px}
+.navtoggle[aria-expanded="true"] .navtoggle-bars{background:transparent}
+.navtoggle[aria-expanded="true"] .navtoggle-bars::before{top:0;transform:rotate(45deg)}
+.navtoggle[aria-expanded="true"] .navtoggle-bars::after{top:0;transform:rotate(-45deg)}
+.bar>:last-child{order:3;flex:0 0 auto}
+.bar>div{gap:6px !important}
+.bar .cta.sm{padding:8px 10px;font-size:14px}
+.bar .langtoggle{padding:5px 8px;font-size:13px}
+nav.links{order:4;flex-basis:100%}
+nav.links.is-open{display:flex;flex-direction:column;align-items:flex-start;gap:0;width:100%;padding:4px 0 8px;margin-top:4px;border-top:1px solid var(--line)}
+nav.links.is-open>a{padding:10px 0}
+nav.links.is-open .navdrop{flex-wrap:wrap;width:100%;padding:10px 0}
+nav.links.is-open .navdrop-menu{flex-basis:100%;padding:2px 0 0 14px}
+nav.links.is-open .navdrop-menu a{padding:8px 0}
+}
+@media(min-width:900px){
+.navdrop:hover>.navdrop-btn{color:var(--ink)}
+.navdrop:hover>.navdrop-btn .navdrop-chev,.navdrop.is-open>.navdrop-btn .navdrop-chev{transform:translateY(1px) rotate(225deg)}
+.navdrop:hover>.navdrop-menu,.navdrop.is-open>.navdrop-menu{display:flex;position:absolute;top:100%;left:0;z-index:60;min-width:248px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(20,20,40,.08);padding:6px}
+.navdrop.is-dismissed:hover>.navdrop-menu{display:none}
+.navdrop.is-dismissed:hover>.navdrop-btn .navdrop-chev{transform:translateY(-2px) rotate(45deg)}
+.navdrop-menu a{white-space:nowrap}
+.navdrop-menu::before{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
+}
+
 .hero{background:radial-gradient(120% 130% at 82% 0%,#2a2ae6 0%,#0b0b28 58%);color:#fff}
 .hero .wrap{padding:66px 24px 62px}
 .crumbs{font-size:13px;color:rgba(255,255,255,.6);margin-bottom:16px}
@@ -92,13 +138,13 @@ footer small{opacity:.5;font-size:12.5px}
 form.book{background:#fff;color:var(--ink);border-radius:22px;padding:28px}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .field{margin-bottom:16px}
-label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:#1c1c28}
 input,select,textarea{width:100%;font:inherit;padding:12px 14px;border:1px solid #dfe2ea;border-radius:10px;background:#fff;color:var(--ink)}
 input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(27,27,230,.14)}
 textarea{min-height:96px;resize:vertical}
 form.book .cta{width:100%;text-align:center;margin-top:6px}
 .formnote{font-size:12.5px;color:var(--muted);margin-top:12px;text-align:center}
-.hp{position:absolute;left:-9999px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 #formStatus{margin-top:14px;font-weight:600;font-size:15px}
 .contactside p{color:rgba(255,255,255,.82);margin-bottom:14px}
 .contactside a{color:#9d9dff;font-weight:600}
@@ -113,7 +159,7 @@ form.book .cta{width:100%;text-align:center;margin-top:6px}
 .tutor .av img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;object-position:center 20%}
 .tutor h3{font-size:19px;margin:0 0 8px}
 .tutor p{font-size:14px;color:var(--muted);text-align:left;line-height:1.55}
-.req{color:var(--red);font-weight:800}
+.req{color:#9f1d1d;font-weight:800}
 </style>
 <script type="application/ld+json">
 {
@@ -122,7 +168,7 @@ form.book .cta{width:100%;text-align:center;margin-top:6px}
 "serviceType": "Online French tutoring",
 "provider": { "@type": "EducationalOrganization", "name": "Winny French", "url": "https://winnyfrench.com/" },
 "areaServed": { "@type": "City", "name": "Aurora", "containedInPlace": { "@type": "AdministrativeArea", "name": "Ontario" } },
-"description": "Affordable online French tutoring for Aurora students and adults: core French, French immersion, high school, and exam preparation from $25 per hour.",
+"description": "Affordable online French tutoring for Aurora students and adults: core French, French immersion, high school, and exam preparation, with group classes from $25 per student per hour.",
 "offers": { "@type": "Offer", "priceCurrency": "CAD", "price": "25", "url": "https://winnyfrench.com/french-tutor-aurora" }
 }
 </script>
@@ -142,8 +188,8 @@ form.book .cta{width:100%;text-align:center;margin-top:6px}
 "@type": "FAQPage",
 "mainEntity": [
 { "@type": "Question", "name": "Do you tutor the York Region French curriculum used in Aurora schools?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our tutors know the Ontario French as a Second Language streams used in York Region District School Board and York Catholic schools, core French from Grade 4, Early French Immersion from Grade 1, and Extended French from Grade 5, and we support classwork, homework, and assessments at each grade level." } },
-{ "@type": "Question", "name": "How much does a French tutor cost in Aurora?", "acceptedAnswer": { "@type": "Answer", "text": "Group classes start at $25 per hour, with up to three learners, well below what most Aurora tutors charge. Every learner can start with a free 30-minute trial." } },
-{ "@type": "Question", "name": "Are the classes online or in person?", "acceptedAnswer": { "@type": "Answer", "text": "Classes are online over video call, so any Aurora family can join from home. We are a York Region nonprofit based next door in King City. Classes run Monday to Friday 4pm to 9pm and anytime on weekends, all Eastern time." } }
+{ "@type": "Question", "name": "How much does a French tutor cost in Aurora?", "acceptedAnswer": { "@type": "Answer", "text": "Group classes are $25 per student per hour, with up to three learners, well below what most Aurora tutors charge. One-on-one classes are $35 per hour, or $30 per hour each when a family takes more than one one-on-one class a week. Every learner can start with a free 30-minute trial." } },
+{ "@type": "Question", "name": "Are the classes online or in person?", "acceptedAnswer": { "@type": "Answer", "text": "Classes are online over video call, so any Aurora family can join from home. We are based in Ontario, online across Canada. Classes run Monday to Friday 4pm to 9pm and anytime on weekends, all Eastern time." } }
 ]
 }
 </script>
@@ -152,10 +198,11 @@ form.book .cta{width:100%;text-align:center;margin-top:6px}
 <header>
 <div class="bar">
 <a href="/" class="logo"><span class="b">Winny</span> <span class="r">French</span></a>
-<nav class="links">
+<button type="button" class="navtoggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span class="navtoggle-bars" aria-hidden="true"></span></button><nav class="links" id="site-nav">
 <a href="/why-us">Why Us</a>
 <a href="/tutors">Tutors</a>
-<a href="/programs">Programs</a>
+<div class="navdrop"><a href="/programs">Programs</a><button type="button" class="navdrop-btn" aria-expanded="false" aria-controls="programs-menu" aria-label="Programs menu"><span class="navdrop-chev" aria-hidden="true"></span></button><div class="navdrop-menu" id="programs-menu"><a href="/french-immersion-tutor">French Immersion Tutoring</a><a href="/tef-tcf-canada-prep">TEF &amp; TCF Canada Prep</a></div></div>
+<a href="/pricing">Pricing</a>
 <a href="/about">About</a>
 <a href="/blog">Blog</a>
 <a href="/faq">FAQ</a>
@@ -167,9 +214,9 @@ form.book .cta{width:100%;text-align:center;margin-top:6px}
 <section class="hero" style="padding:0">
 <div class="wrap">
 <div class="crumbs"><a href="/">Home</a> &rsaquo; French Tutor in Aurora</div>
-<span class="badge"><span class="dot"></span> Improvement in 4 weeks, or a free lesson</span>
+<span class="badge"><span class="dot"></span> A free class if there's no improvement in 4 weeks</span>
 <h1>French tutoring for Aurora students, online and affordable</h1>
-<p class="sub">Core French, immersion, high school, and exam help for Aurora learners of all ages, from just $25/hour.</p>
+<p class="sub">Core French, immersion, high school, and exam help for Aurora learners of all ages, with group classes from $25 per student per hour.</p>
 <a href="#book" class="cta light">Book Your Free Class</a>
 <p class="reassure">Free 30-minute trial. No strings attached. Classes 7 days a week.</p>
 </div>
@@ -179,7 +226,7 @@ form.book .cta{width:100%;text-align:center;margin-top:6px}
 <div class="wrap prose">
 <div class="eyebrow">French tutoring in Aurora</div>
 <h2>Help that matches what Aurora schools teach.</h2>
-<p>Winny French helps Aurora students and adults build real French confidence online, from just $25 an hour. Whether your child is in core French at a York Region District School Board school, in a French Immersion stream, or preparing for a DELF exam, we meet them where they are and build their confidence one clear step at a time. We are a York Region nonprofit based next door in King City.</p>
+<p>Winny French helps Aurora students and adults build real French confidence online, with group classes from $25 per student per hour. Whether your child is in core French at a York Region District School Board school, in a French Immersion stream, or preparing for a DELF exam, we meet them where they are and build their confidence one clear step at a time. We are based in Ontario, online across Canada.</p>
 <p>In York Region, French Immersion starts in Grade 1 and Extended French starts in Grade 5, on top of the core French that begins in Grade 4. That is a lot of French for families to keep up with, especially when the reading and writing load climbs in the later grades. Our tutors know the Ontario French as a Second Language curriculum used across Aurora schools, from Aurora Village and Bayview Northeast to the Hills of St Andrew and Aurora Highlands, so lessons line up with the speaking, listening, reading, and writing your child is actually graded on.</p>
 <h3>What we help Aurora learners with</h3>
 <ul class="ticks">
@@ -235,11 +282,11 @@ form.book .cta{width:100%;text-align:center;margin-top:6px}
 <p>Call or text anytime: <a href="tel:+16473894958">(647) 389-4958</a></p>
 <p style="margin-top:22px;font-size:14px;color:rgba(255,255,255,.6)">Classes run Monday to Friday, 4pm to 9pm, and anytime on weekends (all times Eastern). Open to students and adult learners across Canada.</p>
 </div>
-<form class="book" id="bookForm">
+<form class="book" id="bookForm" data-utm>
 <input type="hidden" name="access_key" value="0216383f-c37e-45cb-87e1-48988cbb0d50">
 <input type="hidden" name="subject" value="New free trial request from Winny French (Aurora page)">
 <input type="hidden" name="from_name" value="Winny French Website">
-<input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+<div class="hp" aria-hidden="true"><label for="botcheck">Leave this field empty</label><input id="botcheck" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></div>
 <div class="row">
 <div class="field"><label for="fn">First name <span class="req">*</span></label><input id="fn" name="First name" required></div>
 <div class="field"><label for="ln">Last name <span class="req">*</span></label><input id="ln" name="Last name" required></div>
@@ -257,10 +304,30 @@ form.book .cta{width:100%;text-align:center;margin-top:6px}
 </select>
 </div>
 <div class="field"><label for="msg">Message</label><textarea id="msg" name="Message" placeholder="Tell us the learner's level and what you're hoping to work on."></textarea></div>
+<input type="hidden" name="utm_source" value="">
+<input type="hidden" name="utm_medium" value="">
+<input type="hidden" name="utm_campaign" value="">
+<input type="hidden" name="utm_content" value="">
+<input type="hidden" name="utm_term" value="">
+<input type="hidden" name="landing_page" value="">
+<input type="hidden" name="referrer" value="">
 <button type="submit" class="cta">Book Your Free Class</button>
 <div id="formStatus" role="status" aria-live="polite"></div>
 <p class="formnote">Fields marked * are required. We reply within 24 hours. Your details are only used to arrange your trial class.</p>
 </form>
+<script>
+/* UTM capture (P2): keeps the visit's campaign tags in sessionStorage (this tab only, cleared when it closes) and copies them into hidden fields of every form marked data-utm. */
+(function(){
+var K=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],q=new URLSearchParams(location.search),got={},s={};
+K.forEach(function(k){var v=q.get(k);if(v){got[k]=v.slice(0,100);}});
+try{if(Object.keys(got).length){got.landing_page=location.pathname;sessionStorage.setItem('wf_utm',JSON.stringify(got));}s=JSON.parse(sessionStorage.getItem('wf_utm')||'{}');}catch(e){s=got;}
+document.querySelectorAll('form[data-utm]').forEach(function(f){
+K.concat(['landing_page']).forEach(function(k){var i=f.querySelector('input[name="'+k+'"]');if(i&&s[k]){i.value=s[k];}});
+var lp=f.querySelector('input[name="landing_page"]');if(lp&&!lp.value){lp.value=location.pathname;}
+var r=f.querySelector('input[name="referrer"]');if(r&&document.referrer&&document.referrer.indexOf(location.hostname)===-1){r.value=document.referrer.slice(0,200);}
+});
+})();
+</script>
 </div>
 </div>
 </section>
@@ -276,11 +343,11 @@ form.book .cta{width:100%;text-align:center;margin-top:6px}
 </details>
 <details>
 <summary>How much does a French tutor cost in Aurora?</summary>
-<p>Group classes start at $25 per hour, with up to three learners, well below what most Aurora tutors charge. Every learner can start with a free 30-minute trial.</p>
+<p>Group classes are $25 per student per hour, with up to three learners, well below what most Aurora tutors charge. One-on-one classes are $35 per hour, or $30 per hour each when a family takes more than one one-on-one class a week. Every learner can start with a free 30-minute trial.</p>
 </details>
 <details>
 <summary>Are the classes online or in person?</summary>
-<p>Classes are online over video call, so any Aurora family can join from home. We are a York Region nonprofit based next door in King City. Classes run Monday to Friday 4pm to 9pm and anytime on weekends, all Eastern time.</p>
+<p>Classes are online over video call, so any Aurora family can join from home. We are based in Ontario, online across Canada. Classes run Monday to Friday 4pm to 9pm and anytime on weekends, all Eastern time.</p>
 </details>
 </div>
 </div>
@@ -314,13 +381,15 @@ form.book .cta{width:100%;text-align:center;margin-top:6px}
 <a href="/why-us">Why Us</a>
 <a href="/tutors">Tutors</a>
 <a href="/programs">Programs</a>
+<a href="/pricing">Pricing</a>
 <a href="/about">About</a>
 <a href="/blog">Blog</a>
 <a href="/faq">FAQ</a>
 <a href="/contact">Contact</a>
+<a href="/privacy">Privacy</a>
 </div>
 <small>Online French tutoring across Canada &copy; Winny French</small>
-<div style="opacity:.5;font-size:12px;line-height:1.5;margin-top:8px">Winny French for Kids &middot; Corporations Canada nonprofit 1687619-6 &middot; 7 Terry View Drive, King City, Ontario, Canada, L7B 0B7</div>
+<div style="opacity:.5;font-size:12px;line-height:1.5;margin-top:8px">Winny French for Kids &middot; Corporations Canada nonprofit 1687619-6 &middot; Based in Ontario, online across Canada</div>
 </div>
 </footer>
 
@@ -352,5 +421,82 @@ status.textContent = 'Something went wrong. Please call or text (647) 389-4958 a
 }
 });
 </script>
+<script>
+/* wf-nav-script */
+(function(){
+  var nav=document.querySelector("header nav.links");
+  var toggle=document.querySelector("header .navtoggle");
+  var drop=document.querySelector("header .navdrop");
+  if(!nav||!drop)return;
+  var btn=drop.querySelector(".navdrop-btn");
+  var wide=window.matchMedia("(min-width:900px)");
+  var fromPointer=false;
+  var blockFocusOpen=false;
+  function setDrop(open){
+    drop.classList.toggle("is-open",open);
+    if(open)drop.classList.remove("is-dismissed");
+    if(btn)btn.setAttribute("aria-expanded",open?"true":"false");
+  }
+  function setNav(open){
+    nav.classList.toggle("is-open",open);
+    if(toggle){
+      toggle.setAttribute("aria-expanded",open?"true":"false");
+      toggle.setAttribute("aria-label",open?"Close menu":"Menu");
+    }
+    if(!open)setDrop(false);
+  }
+  if(btn){
+    btn.addEventListener("pointerdown",function(){fromPointer=true;});
+    btn.addEventListener("click",function(e){
+      e.stopPropagation();
+      fromPointer=false;
+      setDrop(!drop.classList.contains("is-open"));
+    });
+  }
+  if(toggle)toggle.addEventListener("click",function(e){
+    e.stopPropagation();
+    setNav(!nav.classList.contains("is-open"));
+  });
+  drop.addEventListener("focusin",function(){
+    if(fromPointer){fromPointer=false;return;}
+    if(blockFocusOpen)return;
+    setDrop(true);
+  });
+  drop.addEventListener("focusout",function(e){
+    if(drop.contains(e.relatedTarget))return;
+    setDrop(false);
+  });
+  drop.addEventListener("mouseenter",function(){
+    if(!wide.matches||drop.classList.contains("is-dismissed")||!btn)return;
+    btn.setAttribute("aria-expanded","true");
+  });
+  drop.addEventListener("mouseleave",function(){
+    drop.classList.remove("is-dismissed");
+    if(btn&&!drop.classList.contains("is-open")&&!drop.contains(document.activeElement)){
+      btn.setAttribute("aria-expanded","false");
+    }
+  });
+  document.addEventListener("click",function(e){
+    if(!drop.contains(e.target))setDrop(false);
+  });
+  document.addEventListener("keydown",function(e){
+    if(e.key!=="Escape")return;
+    if(drop.classList.contains("is-open")){
+      blockFocusOpen=true;
+      setDrop(false);
+      drop.classList.add("is-dismissed");
+      if(btn)btn.focus();
+      blockFocusOpen=false;
+      return;
+    }
+    if(nav.classList.contains("is-open")&&toggle&&getComputedStyle(toggle).display!=="none"){
+      setNav(false);
+      toggle.focus();
+    }
+  });
+})();
+</script>
+
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0f710da95a134018a2f9a80e820a8de6"}'></script>
 </body>
 </html>

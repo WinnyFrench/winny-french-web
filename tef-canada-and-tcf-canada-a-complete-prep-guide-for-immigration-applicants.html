@@ -22,7 +22,7 @@
 </head><body>
 <header><div class="bar">
 <a href="/" class="logo"><span class="b">Winny</span> <span class="r">French</span></a>
-<nav class="links"><a href="/#why">Why Us</a><a href="/#tutors">Tutors</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/programs">Programs</a><a href="/contact">Contact</a></nav>
+<button type="button" class="navtoggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span class="navtoggle-bars" aria-hidden="true"></span></button><nav class="links" id="site-nav"><a href="/#why">Why Us</a><a href="/#tutors">Tutors</a><a href="/blog">Blog</a><a href="/about">About</a><div class="navdrop"><a href="/programs">Programs</a><button type="button" class="navdrop-btn" aria-expanded="false" aria-controls="programs-menu" aria-label="Programs menu"><span class="navdrop-chev" aria-hidden="true"></span></button><div class="navdrop-menu" id="programs-menu"><a href="/french-immersion-tutor">French Immersion Tutoring</a><a href="/tef-tcf-canada-prep">TEF &amp; TCF Canada Prep</a></div></div><a href="/pricing">Pricing</a><a href="/contact">Contact</a></nav>
 <a href="/#contact" class="cta sm">Book Free Class</a>
 </div></header>
 <article class="article">
@@ -50,7 +50,7 @@
 <h2>What effective preparation looks like</h2>
 <p>The biggest mistake is treating prep as a test-taking trick rather than language development. Memorizing templates helps at the margins; it won't move you from CLB 5 to CLB 7, that takes real growth. Effective preparation has three layers: language development (vocabulary, accuracy, and fluency through real input and output), exam familiarity (format, timing, and official practice materials), and targeted work on your weakest component, which is usually what drags the overall score down. A qualified instructor accelerates all three with feedback you can't give yourself.</p>
 <h2>How Winny French prepares you</h2>
-<p>Our TEF/TCF program is one-on-one or small group (max 3 students), online, 60 minutes, $25/hour. We assess your level in the free first session before recommending a timeline, no false promises. Sessions are organized by component using official TEF Canada and TCF Canada materials, every session includes real speaking practice, we mark your writing with examiner-level criteria, and we run timed mock exams in the final phase.</p><div class="ctabox"><a href="/#contact" class="cta">Book Your Free Class</a></div><h2>Common questions</h2>
+<p>Our TEF/TCF program is online in 60-minute classes: small groups of up to three at $25 per student per hour, or one-on-one at $35 per hour ($30 per hour each when a family takes more than one one-on-one class a week). We assess your level in the free first session before recommending a timeline, no false promises. Sessions are organized by component using official TEF Canada and TCF Canada materials, every session includes real speaking practice, we mark your writing with examiner-level criteria, and we run timed mock exams in the final phase.</p><div class="ctabox"><a href="/#contact" class="cta">Book Your Free Class</a></div><h2>Common questions</h2>
 <p><strong>Can I take the exam from home?</strong></p>
 <p>No, both must be taken in person at an authorized test centre.</p>
 <p><strong>How far ahead should I book?</strong></p>
@@ -61,15 +61,204 @@
 <p>Yes, IRCC accepts results from the last two years.</p>
 <p><strong>Is France French the same as Canadian French here?</strong></p>
 <p>The exams include various accents, but the target is standard French; Québécois-specific vocabulary isn't required.</p>
-<p><em>Winny French tutors help students across Canada reach CLB 7, 8, and 9 for Express Entry and provincial programs. Winny French offers $25/hour online prep with a free 30-minute trial. Always confirm current immigration requirements on Canada.ca.</em></p>
+<p><em>Winny French tutors help students across Canada reach CLB 7, 8, and 9 for Express Entry and provincial programs. Winny French offers online French classes across Canada: small groups of up to three at $25 per student per hour, or one-on-one at $35 per hour ($30 per hour each when a family takes more than one one-on-one class a week), with a free 30-minute trial. Always confirm current immigration requirements on Canada.ca.</em></p>
 <p>Brushing up on grammar for the exam? Start with our guide to the <a href="/post/passe-compose">passé composé</a>, one of the most-tested French past tenses.</p>
+<p><a href="/tef-tcf-canada-prep">TEF Canada and TCF Canada prep</a> has the class format, the current prices and a free speaking check.</p>
+
+<!-- Inline lead-magnet box for blog posts (DRAFT, rebuilt Oct 21, 2026). Replace tef-canada-and-tcf-canada-a-complete-prep-guide-for-immigration-applicants. If the post already has the two scripts, include them only once. -->
+<style>
+.wfm{font-family:inherit;background:#f7f8fc;border:1px solid #eceef4;border-radius:18px;padding:22px;margin:28px 0;color:#1c1c28}
+.wfm h3{margin:0 0 6px;font-size:20px;color:#0B0B28}
+.wfm p.wfm-lead{color:#5b5b6b;font-size:15px;margin:0 0 12px}
+.wfm .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.wfm .field{margin-bottom:12px}
+.wfm label{display:block;font-size:13px;font-weight:700;margin-bottom:5px;color:#1c1c28}
+.wfm input,.wfm select{width:100%;font:inherit;padding:10px 12px;border:1px solid #dfe2ea;border-radius:10px;background:#fff}
+.wfm .check{display:flex;gap:10px;align-items:flex-start}
+.wfm .check input{width:18px;height:18px;margin-top:3px;flex:0 0 auto}
+.wfm .check label{font-weight:600;font-size:13px;margin:0}
+.wfm .casl-id{font-size:11.5px;color:#5b5b6b;margin:2px 0 12px 28px}
+.wfm .cta{display:block;width:100%;background:#1B1BE6;color:#fff;border:0;border-radius:12px;padding:13px;font-weight:700;font-size:16px;cursor:pointer}
+.wfm .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.wfm .formStatus{margin-top:10px;font-weight:600}
+.wfm .privacy-line{font-size:12.5px;color:#5b5b6b;margin-top:10px;text-align:center}
+.wfm .req{color:#9f1d1d}
+@media(max-width:560px){.wfm .row{grid-template-columns:1fr}}
+</style>
+<div class="wfm" id="lm1-post-wrap">
+<h3>Free download: TEF Canada &amp; TCF Canada Phrase Bank</h3>
+<p class="wfm-lead">Speaking and writing phrases for the exam tasks, plus a one-page NCLC cheat sheet. Free PDF.</p>
+<form class="book" id="lm1-post" data-utm data-goal="LM1 sign-up" data-redirect="/thanks-tef-tcf-phrase-bank">
+<input type="hidden" name="access_key" value="0216383f-c37e-45cb-87e1-48988cbb0d50">
+<input type="hidden" name="subject" value="Lead magnet: LM1 TEF Canada &amp; TCF Canada Phrase Bank + NCLC cheat sheet">
+<input type="hidden" name="from_name" value="Winny French Website">
+<input type="hidden" name="Lead magnet" value="LM1 TEF Canada &amp; TCF Canada Phrase Bank + NCLC cheat sheet">
+<input type="hidden" name="Form placement" value="Blog post inline: tef-canada-and-tcf-canada-a-complete-prep-guide-for-immigration-applicants">
+<div class="hp" aria-hidden="true"><label for="botcheck-lm1-post">Leave this field empty</label><input id="botcheck-lm1-post" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></div>
+<div class="row">
+<div class="field"><label for="fn-lm1-post">First name <span class="req">*</span></label><input id="fn-lm1-post" name="First name" autocomplete="given-name" required></div>
+<div class="field"><label for="em-lm1-post">Email <span class="req">*</span></label><input id="em-lm1-post" type="email" name="Email" autocomplete="email" required></div>
+</div>
+<div class="field"><label for="ex-lm1-post">Which test?</label>
+<select id="ex-lm1-post" name="Target test">
+<option value="">Select one</option>
+<option>TEF Canada</option>
+<option>TCF Canada</option>
+<option>Not sure yet</option>
+</select>
+</div>
+<div class="field"><label for="dt-lm1-post">Target test date (optional)</label><input id="dt-lm1-post" type="month" name="Target test date"></div>
+<div class="field"><label for="hd-lm1-post">How did you hear about us?</label>
+<select id="hd-lm1-post" name="How did you hear about us">
+<option value="">Select one</option>
+<option>Google search</option>
+<option>Google Maps or Google reviews</option>
+<option>Social media (Instagram, Facebook, LinkedIn)</option>
+<option>Friend or family referral</option>
+<option>Event / fair</option>
+<option>Community sponsorship or partner (school council, association)</option>
+<option>Free download or guide</option>
+<option>Email from Winny French</option>
+<option>Article or interview (e.g., BC Parent)</option>
+<option>Winny Math</option>
+<option>Returning student</option>
+<option>Other</option>
+</select>
+</div>
+<input type="hidden" name="Email follow-up consent" value="No (box not ticked)">
+<div class="check"><input type="checkbox" id="casl-lm1-post" name="Email follow-up consent" value="Yes (box ticked by visitor)"><label for="casl-lm1-post">Yes, Winny French may email me French-learning tips, free resources and occasional offers about its tutoring. I can unsubscribe at any time.</label></div>
+<p class="casl-id">Sent by Winny French for Kids (Winny French), 18 Doctor's Lane, King City, ON L7B 1A0, Canada, (647) 389-4958, winnyfrench.com. You can withdraw your consent at any time using the unsubscribe link in any email, or by contacting us.</p>
+<input type="hidden" name="Consent wording" value="CASL-v1-2026-10-19: Yes, Winny French may email me French-learning tips, free resources and occasional offers about its tutoring. I can unsubscribe at any time.">
+<input type="hidden" name="utm_source" value="">
+<input type="hidden" name="utm_medium" value="">
+<input type="hidden" name="utm_campaign" value="">
+<input type="hidden" name="utm_content" value="">
+<input type="hidden" name="utm_term" value="">
+<input type="hidden" name="landing_page" value="">
+<input type="hidden" name="referrer" value="">
+<button type="submit" class="cta">Send me the phrase bank</button>
+<div class="formStatus" role="status" aria-live="polite"></div>
+<p class="privacy-line">We use your details to send your free guide and, only if you tick the box, occasional emails. See our <a href="/privacy">Privacy Policy</a>.</p>
+</form>
+</div>
+<script>
+/* UTM capture (P2): keeps the visit's campaign tags in sessionStorage (this tab only, cleared when it closes) and copies them into hidden fields of every form marked data-utm. */
+(function(){
+var K=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],q=new URLSearchParams(location.search),got={},s={};
+K.forEach(function(k){var v=q.get(k);if(v){got[k]=v.slice(0,100);}});
+try{if(Object.keys(got).length){got.landing_page=location.pathname;sessionStorage.setItem('wf_utm',JSON.stringify(got));}s=JSON.parse(sessionStorage.getItem('wf_utm')||'{}');}catch(e){s=got;}
+document.querySelectorAll('form[data-utm]').forEach(function(f){
+K.concat(['landing_page']).forEach(function(k){var i=f.querySelector('input[name="'+k+'"]');if(i&&s[k]){i.value=s[k];}});
+var lp=f.querySelector('input[name="landing_page"]');if(lp&&!lp.value){lp.value=location.pathname;}
+var r=f.querySelector('input[name="referrer"]');if(r&&document.referrer&&document.referrer.indexOf(location.hostname)===-1){r.value=document.referrer.slice(0,200);}
+});
+})();
+</script>
+<script>
+/* Web3Forms submit, same pattern as the live site, extended for several forms per page and an optional same-site thank-you redirect. */
+document.querySelectorAll('form.book').forEach(function(form){
+var status=form.querySelector('.formStatus');
+form.addEventListener('submit',async function(e){
+e.preventDefault();
+status.style.color='#5b5b6b';status.textContent='Sending...';
+try{
+const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(form)))});
+const data=await res.json();
+if(data.success){
+if(window.plausible&&form.dataset.goal){window.plausible(form.dataset.goal);}
+if(form.dataset.redirect){window.location.href=form.dataset.redirect;return;}
+form.reset();status.style.color='#0a8a4a';status.textContent=form.dataset.success||'Thank you. A tutor will be in touch within 24 hours to schedule your class.';
+}else{status.style.color='#E63329';status.textContent='Something went wrong. Please call or text (647) 389-4958 and we will sort it out.';}
+}catch(err){status.style.color='#E63329';status.textContent='Something went wrong. Please call or text (647) 389-4958 and we will sort it out.';}
+});
+});
+</script>
+
 </div>
 <a href="/blog" class="backblog">&larr; All blog posts</a>
 </article>
 <footer><div class="wrap">
 <a href="/" class="logo"><span class="b" style="color:#8f8fff">Winny</span> <span class="r" style="color:#ff6b61">French</span></a>
-<div class="fnav"><a href="/#why">Why Us</a><a href="/#tutors">Tutors</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/programs">Programs</a><a href="/contact">Contact</a></div>
+<div class="fnav"><a href="/#why">Why Us</a><a href="/#tutors">Tutors</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/programs">Programs</a><a href="/pricing">Pricing</a><a href="/contact">Contact</a>
+<a href="/privacy">Privacy</a></div>
 <small>Online French tutoring across Canada &copy; Winny French</small>
-<div style="opacity:.5;font-size:12px;line-height:1.5;margin-top:8px">Winny French for Kids &middot; Corporations Canada nonprofit 1687619-6 &middot; 7 Terry View Drive, King City, Ontario, Canada, L7B 0B7</div>
+<div style="opacity:.5;font-size:12px;line-height:1.5;margin-top:8px">Winny French for Kids &middot; Corporations Canada nonprofit 1687619-6 &middot; Based in Ontario, online across Canada</div>
 </div></footer>
+<script>
+/* wf-nav-script */
+(function(){
+  var nav=document.querySelector("header nav.links");
+  var toggle=document.querySelector("header .navtoggle");
+  var drop=document.querySelector("header .navdrop");
+  if(!nav||!drop)return;
+  var btn=drop.querySelector(".navdrop-btn");
+  var wide=window.matchMedia("(min-width:900px)");
+  var fromPointer=false;
+  var blockFocusOpen=false;
+  function setDrop(open){
+    drop.classList.toggle("is-open",open);
+    if(open)drop.classList.remove("is-dismissed");
+    if(btn)btn.setAttribute("aria-expanded",open?"true":"false");
+  }
+  function setNav(open){
+    nav.classList.toggle("is-open",open);
+    if(toggle){
+      toggle.setAttribute("aria-expanded",open?"true":"false");
+      toggle.setAttribute("aria-label",open?"Close menu":"Menu");
+    }
+    if(!open)setDrop(false);
+  }
+  if(btn){
+    btn.addEventListener("pointerdown",function(){fromPointer=true;});
+    btn.addEventListener("click",function(e){
+      e.stopPropagation();
+      fromPointer=false;
+      setDrop(!drop.classList.contains("is-open"));
+    });
+  }
+  if(toggle)toggle.addEventListener("click",function(e){
+    e.stopPropagation();
+    setNav(!nav.classList.contains("is-open"));
+  });
+  drop.addEventListener("focusin",function(){
+    if(fromPointer){fromPointer=false;return;}
+    if(blockFocusOpen)return;
+    setDrop(true);
+  });
+  drop.addEventListener("focusout",function(e){
+    if(drop.contains(e.relatedTarget))return;
+    setDrop(false);
+  });
+  drop.addEventListener("mouseenter",function(){
+    if(!wide.matches||drop.classList.contains("is-dismissed")||!btn)return;
+    btn.setAttribute("aria-expanded","true");
+  });
+  drop.addEventListener("mouseleave",function(){
+    drop.classList.remove("is-dismissed");
+    if(btn&&!drop.classList.contains("is-open")&&!drop.contains(document.activeElement)){
+      btn.setAttribute("aria-expanded","false");
+    }
+  });
+  document.addEventListener("click",function(e){
+    if(!drop.contains(e.target))setDrop(false);
+  });
+  document.addEventListener("keydown",function(e){
+    if(e.key!=="Escape")return;
+    if(drop.classList.contains("is-open")){
+      blockFocusOpen=true;
+      setDrop(false);
+      drop.classList.add("is-dismissed");
+      if(btn)btn.focus();
+      blockFocusOpen=false;
+      return;
+    }
+    if(nav.classList.contains("is-open")&&toggle&&getComputedStyle(toggle).display!=="none"){
+      setNav(false);
+      toggle.focus();
+    }
+  });
+})();
+</script>
+
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0f710da95a134018a2f9a80e820a8de6"}'></script>
 </body></html>

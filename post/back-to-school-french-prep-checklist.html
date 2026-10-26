@@ -22,10 +22,11 @@
 </head><body>
 <header><div class="bar">
 <a href="/" class="logo"><span class="b">Winny</span> <span class="r">French</span></a>
-<nav class="links">
+<button type="button" class="navtoggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span class="navtoggle-bars" aria-hidden="true"></span></button><nav class="links" id="site-nav">
 <a href="/why-us">Why Us</a>
 <a href="/tutors">Tutors</a>
-<a href="/programs">Programs</a>
+<div class="navdrop"><a href="/programs">Programs</a><button type="button" class="navdrop-btn" aria-expanded="false" aria-controls="programs-menu" aria-label="Programs menu"><span class="navdrop-chev" aria-hidden="true"></span></button><div class="navdrop-menu" id="programs-menu"><a href="/french-immersion-tutor">French Immersion Tutoring</a><a href="/tef-tcf-canada-prep">TEF &amp; TCF Canada Prep</a></div></div>
+<a href="/pricing">Pricing</a>
 <a href="/about">About</a>
 <a href="/blog">Blog</a>
 <a href="/faq">FAQ</a>
@@ -61,15 +62,15 @@
 <h2>The one habit that beats cramming</h2>
 <p>If you do nothing else from this list, do this: ten minutes of French every day, out loud, is worth more than an hour of silent review on the weekend. Language lives in frequent, spoken practice. A short daily rhythm, a patient adult or tutor to talk to, and early attention when something slips is the whole formula for a strong French year.</p>
 <div class="ctabox"><a href="/#contact" class="cta">Book Your Free Class</a></div>
-<p>If the first few weeks show your child needs a hand, a tutor can help without adding pressure at home. Winny French runs small online classes for students across Ontario, from just $25 an hour, with a free 30-minute trial so you can see if it fits before you commit. A tutor gets in touch within 24 hours to book the trial at a time that works for your family.</p>
+<p>If the first few weeks show your child needs a hand, a tutor can help without adding pressure at home. Winny French runs small online classes for students across Ontario, with group classes from $25 per student per hour, with a free 30-minute trial so you can see if it fits before you commit. A tutor gets in touch within 24 hours to book the trial at a time that works for your family.</p>
 <h2>Frequently asked questions</h2>
 <p><strong>When should we start tutoring if my child is struggling?</strong></p>
 <p>Earlier is easier. A gap caught in September is a few weeks of work, while the same gap caught in January has usually spread into new units. If the first two evaluations come back low, that is the moment to act.</p>
 <p><strong>My child is in immersion and I do not speak French. Can I still help?</strong></p>
 <p>Yes. You do not need French to build the routine, keep an eye on the early warning signs, and talk to the teacher. For the actual French, a tutor who knows the immersion curriculum can do the part you cannot.</p>
 <p><strong>What grades do you tutor?</strong></p>
-<p>Grades 1 through 12, plus adult learners and TEF and TCF Canada exam preparation. Classes are online, from $25 an hour, with a free 30-minute trial.</p>
-<p><em>Published August 2026. Winny French is a Canadian nonprofit offering online French tutoring across Ontario and Canada at $25 an hour, with a free 30-minute trial.</em></p>
+<p>Grades 1 through 12, plus adult learners and TEF and TCF Canada exam preparation. Classes are online. Group classes are $25 per student per hour, and one-on-one is $35 per hour, with a free 30-minute trial.</p>
+<p><em>Published August 2026. Winny French is a Canadian nonprofit offering online French tutoring across Ontario and Canada, with group classes at $25 per student per hour and one-on-one at $35 per hour, and a free 30-minute trial.</em></p>
 </div>
 <a href="/blog" class="backblog">&larr; All blog posts</a>
 </article>
@@ -79,12 +80,91 @@
 <a href="/why-us">Why Us</a>
 <a href="/tutors">Tutors</a>
 <a href="/programs">Programs</a>
+<a href="/pricing">Pricing</a>
 <a href="/about">About</a>
 <a href="/blog">Blog</a>
 <a href="/faq">FAQ</a>
 <a href="/contact">Contact</a>
+<a href="/privacy">Privacy</a>
 </div>
 <small>Online French tutoring across Canada &copy; Winny French</small>
-<div style="opacity:.5;font-size:12px;line-height:1.5;margin-top:8px">Winny French for Kids &middot; Corporations Canada nonprofit 1687619-6 &middot; 7 Terry View Drive, King City, Ontario, Canada, L7B 0B7</div>
+<div style="opacity:.5;font-size:12px;line-height:1.5;margin-top:8px">Winny French for Kids &middot; Corporations Canada nonprofit 1687619-6 &middot; Based in Ontario, online across Canada</div>
 </div></footer>
+<script>
+/* wf-nav-script */
+(function(){
+  var nav=document.querySelector("header nav.links");
+  var toggle=document.querySelector("header .navtoggle");
+  var drop=document.querySelector("header .navdrop");
+  if(!nav||!drop)return;
+  var btn=drop.querySelector(".navdrop-btn");
+  var wide=window.matchMedia("(min-width:900px)");
+  var fromPointer=false;
+  var blockFocusOpen=false;
+  function setDrop(open){
+    drop.classList.toggle("is-open",open);
+    if(open)drop.classList.remove("is-dismissed");
+    if(btn)btn.setAttribute("aria-expanded",open?"true":"false");
+  }
+  function setNav(open){
+    nav.classList.toggle("is-open",open);
+    if(toggle){
+      toggle.setAttribute("aria-expanded",open?"true":"false");
+      toggle.setAttribute("aria-label",open?"Close menu":"Menu");
+    }
+    if(!open)setDrop(false);
+  }
+  if(btn){
+    btn.addEventListener("pointerdown",function(){fromPointer=true;});
+    btn.addEventListener("click",function(e){
+      e.stopPropagation();
+      fromPointer=false;
+      setDrop(!drop.classList.contains("is-open"));
+    });
+  }
+  if(toggle)toggle.addEventListener("click",function(e){
+    e.stopPropagation();
+    setNav(!nav.classList.contains("is-open"));
+  });
+  drop.addEventListener("focusin",function(){
+    if(fromPointer){fromPointer=false;return;}
+    if(blockFocusOpen)return;
+    setDrop(true);
+  });
+  drop.addEventListener("focusout",function(e){
+    if(drop.contains(e.relatedTarget))return;
+    setDrop(false);
+  });
+  drop.addEventListener("mouseenter",function(){
+    if(!wide.matches||drop.classList.contains("is-dismissed")||!btn)return;
+    btn.setAttribute("aria-expanded","true");
+  });
+  drop.addEventListener("mouseleave",function(){
+    drop.classList.remove("is-dismissed");
+    if(btn&&!drop.classList.contains("is-open")&&!drop.contains(document.activeElement)){
+      btn.setAttribute("aria-expanded","false");
+    }
+  });
+  document.addEventListener("click",function(e){
+    if(!drop.contains(e.target))setDrop(false);
+  });
+  document.addEventListener("keydown",function(e){
+    if(e.key!=="Escape")return;
+    if(drop.classList.contains("is-open")){
+      blockFocusOpen=true;
+      setDrop(false);
+      drop.classList.add("is-dismissed");
+      if(btn)btn.focus();
+      blockFocusOpen=false;
+      return;
+    }
+    if(nav.classList.contains("is-open")&&toggle&&getComputedStyle(toggle).display!=="none"){
+      setNav(false);
+      toggle.focus();
+    }
+  });
+})();
+</script>
+
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0f710da95a134018a2f9a80e820a8de6"}'></script>
 </body></html>
