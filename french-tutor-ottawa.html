@@ -41,6 +41,52 @@ nav.links{display:none;flex-wrap:wrap;gap:26px;font-size:15px;color:var(--muted)
 nav.links a{text-decoration:none}
 nav.links a:hover{color:var(--ink)}
 @media(min-width:900px){nav.links{display:flex}}
+/* wf-programs-nav */
+.navtoggle{display:none}
+.navdrop{position:relative;display:inline-flex;align-items:center}
+.navdrop-btn{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;margin-left:1px;padding:0;border:0;background:transparent;color:var(--muted);cursor:pointer;border-radius:6px;line-height:1}
+.navdrop-btn:hover,.navdrop.is-open>.navdrop-btn{color:var(--ink)}
+.navdrop-btn:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.navdrop-chev{display:block;width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg)}
+.navdrop.is-open>.navdrop-btn .navdrop-chev{transform:translateY(1px) rotate(225deg)}
+.navdrop-menu{display:none;flex-direction:column}
+.navdrop-menu a{display:block;padding:8px 12px;border-radius:8px;color:var(--muted);font-weight:600;text-decoration:none}
+.navdrop-menu a:hover{color:var(--ink);background:var(--soft)}
+.navdrop.is-open>.navdrop-menu{display:flex}
+@media(max-width:899px){
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;padding:12px 10px;column-gap:6px;row-gap:8px}
+.bar>.logo{white-space:nowrap;flex:0 0 auto;margin-right:auto;order:1;font-size:22px}
+.navtoggle{display:inline-flex;align-items:center;justify-content:center;order:2;flex:0 0 auto;margin:0;width:34px;height:34px;padding:0;color:var(--navy);background:#fff;border:1px solid var(--line);border-radius:10px;cursor:pointer}
+.navtoggle:hover{background:var(--soft)}
+.navtoggle:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.navtoggle-bars{display:block;width:16px;height:2px;background:currentColor;border-radius:1px;position:relative}
+.navtoggle-bars::before,.navtoggle-bars::after{content:"";position:absolute;left:0;width:16px;height:2px;background:currentColor;border-radius:1px}
+.navtoggle-bars::before{top:-5px}
+.navtoggle-bars::after{top:5px}
+.navtoggle[aria-expanded="true"] .navtoggle-bars{background:transparent}
+.navtoggle[aria-expanded="true"] .navtoggle-bars::before{top:0;transform:rotate(45deg)}
+.navtoggle[aria-expanded="true"] .navtoggle-bars::after{top:0;transform:rotate(-45deg)}
+.bar>:last-child{order:3;flex:0 0 auto}
+.bar>div{gap:6px !important}
+.bar .cta.sm{padding:8px 10px;font-size:14px}
+.bar .langtoggle{padding:5px 8px;font-size:13px}
+nav.links{order:4;flex-basis:100%}
+nav.links.is-open{display:flex;flex-direction:column;align-items:flex-start;gap:0;width:100%;padding:4px 0 8px;margin-top:4px;border-top:1px solid var(--line)}
+nav.links.is-open>a{padding:10px 0}
+nav.links.is-open .navdrop{flex-wrap:wrap;width:100%;padding:10px 0}
+nav.links.is-open .navdrop-menu{flex-basis:100%;padding:2px 0 0 14px}
+nav.links.is-open .navdrop-menu a{padding:8px 0}
+}
+@media(min-width:900px){
+.navdrop:hover>.navdrop-btn{color:var(--ink)}
+.navdrop:hover>.navdrop-btn .navdrop-chev,.navdrop.is-open>.navdrop-btn .navdrop-chev{transform:translateY(1px) rotate(225deg)}
+.navdrop:hover>.navdrop-menu,.navdrop.is-open>.navdrop-menu{display:flex;position:absolute;top:100%;left:0;z-index:60;min-width:248px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(20,20,40,.08);padding:6px}
+.navdrop.is-dismissed:hover>.navdrop-menu{display:none}
+.navdrop.is-dismissed:hover>.navdrop-btn .navdrop-chev{transform:translateY(-2px) rotate(45deg)}
+.navdrop-menu a{white-space:nowrap}
+.navdrop-menu::before{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
+}
+
 .hero{background:radial-gradient(120% 130% at 82% 0%,#2a2ae6 0%,#0b0b28 58%);color:#fff}
 .hero .wrap{padding:66px 24px 62px}
 .crumbs{font-size:13px;color:rgba(255,255,255,.6);margin-bottom:16px}
@@ -153,10 +199,10 @@ form.book .cta{width:100%;text-align:center;margin-top:6px}
 <header>
 <div class="bar">
 <a href="/" class="logo"><span class="b">Winny</span> <span class="r">French</span></a>
-<nav class="links">
+<button type="button" class="navtoggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span class="navtoggle-bars" aria-hidden="true"></span></button><nav class="links" id="site-nav">
 <a href="/why-us">Why Us</a>
 <a href="/tutors">Tutors</a>
-<a href="/programs">Programs</a>
+<div class="navdrop"><a href="/programs">Programs</a><button type="button" class="navdrop-btn" aria-expanded="false" aria-controls="programs-menu" aria-label="Programs menu"><span class="navdrop-chev" aria-hidden="true"></span></button><div class="navdrop-menu" id="programs-menu"><a href="/french-immersion-tutor">French Immersion Tutoring</a><a href="/tef-tcf-canada-prep">TEF &amp; TCF Canada Prep</a></div></div>
 <a href="/about">About</a>
 <a href="/blog">Blog</a>
 <a href="/faq">FAQ</a>
@@ -377,5 +423,81 @@ status.textContent = 'Something went wrong. Please call or text (647) 389-4958 a
 }
 });
 </script>
+<script>
+/* wf-nav-script */
+(function(){
+  var nav=document.querySelector("header nav.links");
+  var toggle=document.querySelector("header .navtoggle");
+  var drop=document.querySelector("header .navdrop");
+  if(!nav||!drop)return;
+  var btn=drop.querySelector(".navdrop-btn");
+  var wide=window.matchMedia("(min-width:900px)");
+  var fromPointer=false;
+  var blockFocusOpen=false;
+  function setDrop(open){
+    drop.classList.toggle("is-open",open);
+    if(open)drop.classList.remove("is-dismissed");
+    if(btn)btn.setAttribute("aria-expanded",open?"true":"false");
+  }
+  function setNav(open){
+    nav.classList.toggle("is-open",open);
+    if(toggle){
+      toggle.setAttribute("aria-expanded",open?"true":"false");
+      toggle.setAttribute("aria-label",open?"Close menu":"Menu");
+    }
+    if(!open)setDrop(false);
+  }
+  if(btn){
+    btn.addEventListener("pointerdown",function(){fromPointer=true;});
+    btn.addEventListener("click",function(e){
+      e.stopPropagation();
+      fromPointer=false;
+      setDrop(!drop.classList.contains("is-open"));
+    });
+  }
+  if(toggle)toggle.addEventListener("click",function(e){
+    e.stopPropagation();
+    setNav(!nav.classList.contains("is-open"));
+  });
+  drop.addEventListener("focusin",function(){
+    if(fromPointer){fromPointer=false;return;}
+    if(blockFocusOpen)return;
+    setDrop(true);
+  });
+  drop.addEventListener("focusout",function(e){
+    if(drop.contains(e.relatedTarget))return;
+    setDrop(false);
+  });
+  drop.addEventListener("mouseenter",function(){
+    if(!wide.matches||drop.classList.contains("is-dismissed")||!btn)return;
+    btn.setAttribute("aria-expanded","true");
+  });
+  drop.addEventListener("mouseleave",function(){
+    drop.classList.remove("is-dismissed");
+    if(btn&&!drop.classList.contains("is-open")&&!drop.contains(document.activeElement)){
+      btn.setAttribute("aria-expanded","false");
+    }
+  });
+  document.addEventListener("click",function(e){
+    if(!drop.contains(e.target))setDrop(false);
+  });
+  document.addEventListener("keydown",function(e){
+    if(e.key!=="Escape")return;
+    if(drop.classList.contains("is-open")){
+      blockFocusOpen=true;
+      setDrop(false);
+      drop.classList.add("is-dismissed");
+      if(btn)btn.focus();
+      blockFocusOpen=false;
+      return;
+    }
+    if(nav.classList.contains("is-open")&&toggle&&getComputedStyle(toggle).display!=="none"){
+      setNav(false);
+      toggle.focus();
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
