@@ -307,6 +307,45 @@ var r=f.querySelector('input[name="referrer"]');if(r&&document.referrer&&documen
 })();
 </script>
 <script>
+/* wf-phone-required: phone is required on every form that emails us. Light check only: at least 10 digits once non-digits are stripped. */
+(function(){
+var MSG = document.documentElement.lang === 'fr'
+  ? 'Veuillez ajouter un numéro de téléphone pour que nous puissions vous joindre.'
+  : 'Please add a phone number so we can reach you.';
+function digits(v){return String(v||'').replace(/\D/g,'');}
+function statusEl(form){return form.querySelector('.formStatus') || form.querySelector('#formStatus') || document.getElementById('formStatus');}
+function show(form){var st=statusEl(form); if(st){st.style.color='#E63329'; st.textContent=MSG;}}
+document.querySelectorAll('form.book').forEach(function(form){
+  var phone=form.querySelector('input[type="tel"]');
+  if(!phone) return;
+  function ok(){return digits(phone.value).length>=10;}
+  function sync(){phone.setCustomValidity(ok()?'':MSG);}
+  phone.addEventListener('input', function(){
+    if(ok() || !String(phone.value||'').trim()) phone.setCustomValidity('');
+    else phone.setCustomValidity(MSG);
+  });
+  function gate(){sync();}
+  var btn=form.querySelector('button[type="submit"], input[type="submit"]');
+  if(btn) btn.addEventListener('click', gate);
+  form.addEventListener('keydown', function(e){
+    if(e.key==='Enter' && e.target && e.target.tagName!=='TEXTAREA') gate();
+  });
+  phone.addEventListener('invalid', function(){
+    var first=form.querySelector(':invalid');
+    if(first && first!==phone) return;
+    show(form);
+  });
+  form.addEventListener('submit', function(e){
+    sync();
+    if(ok()) return;
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    show(form);
+    if(phone.reportValidity) phone.reportValidity();
+  }, true);
+});
+})();
+
 /* Web3Forms submit, same pattern as the live site, extended for several forms per page and an optional same-site thank-you redirect. */
 document.querySelectorAll('form.book').forEach(function(form){
 var status=form.querySelector('.formStatus');
