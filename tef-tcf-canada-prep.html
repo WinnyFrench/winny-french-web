@@ -483,6 +483,16 @@ table.cost a{color:var(--blue)}
 </div>
 </section>
 
+<section id="practice-pack" style="border-top:1px solid var(--line)">
+<div class="wrap prose">
+<div class="eyebrow">Practise on your own</div>
+<h2>The TEF &amp; TCF Canada Practice Pack</h2>
+<p>Between classes, or before you start, practise with 59 timed speaking and writing prompts, 10 model answers with notes, a 4-week plan and answer keys. It's built to go with our free phrase bank, not to repeat it.</p>
+<p><b>$20 CAD &middot; 40-page PDF &middot; instant download</b></p>
+<p style="margin-top:16px;display:flex;flex-wrap:wrap;gap:12px"><a href="/tef-tcf-canada-practice-pack" class="cta" style="color:#fff">See what's inside</a> <a href="https://buy.stripe.com/9B6eVfgHQ0XG2ab8Z53oA00" class="cta" data-buy="practice-pack" style="color:#fff;background:var(--red);box-shadow:none">Buy now, $20</a></p>
+</div>
+</section>
+
 <section>
 <div class="wrap prose">
 <div class="eyebrow">Pricing</div>
@@ -857,5 +867,9 @@ form.reset();status.style.color='#0a8a4a';status.textContent=form.dataset.succes
 </script>
 
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0f710da95a134018a2f9a80e820a8de6"}'></script>
+<script>
+/* wf-practice-pack: count Buy clicks in Plausible, like the form goals. */
+document.querySelectorAll('a[data-buy]').forEach(function(a){a.addEventListener('click',function(){if(window.plausible){window.plausible('Practice pack: buy click');}});});
+</script>
 </body>
 </html>
