@@ -22,7 +22,7 @@
     magnet        which free guide (lead magnet forms only)
 */
 (function () {
-  var PLAUSIBLE_SRC = 'https://plausible.io/js/script.js';
+  var PLAUSIBLE_SRC = 'https://plausible.io/js/pa-E89r0pXEl-ZB2o-O9rKi0.js';
   var DOMAIN = 'winnyfrench.com';
 
   // Queue stub, so events fired before the script loads are not lost.
