@@ -1,4 +1,5 @@
 # Winny French website
 
-Source for the Winny French tutoring website. Hosted on Cloudflare Pages.
-Deployed via GitHub Pages.
+Source for the Winny French tutoring website (winnyfrench.com).
+Hosted on GitHub Pages, built from the main branch root. DNS is managed at Wix.
+Analytics: Cloudflare Web Analytics and Plausible (loader in js/wf-analytics.js).

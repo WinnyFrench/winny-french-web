@@ -170,6 +170,7 @@ form.book .cta{width:100%;text-align:center;margin-top:6px}
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do you support French immersion and French-language school students?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We help immersion students and students in French-language schools, aligning lessons with the Ontario curriculum and working at your child's pace."}}, {"@type": "Question", "name": "How much does a French tutor cost in Sudbury?", "acceptedAnswer": {"@type": "Answer", "text": "Group classes are $25 per student per hour, with up to three learners. One-on-one classes are $35 per hour, or $30 per hour each when a family takes more than one one-on-one class a week. Every learner can start with a free 30-minute trial."}}, {"@type": "Question", "name": "Do your tutors prepare students for DELF?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Several of our tutors are DELF certified and prepare learners for DELF and DELF Junior, as well as TEF and TCF Canada for adults."}}]}
 </script>
+<script defer src="/js/wf-analytics.js"></script>
 </head>
 <body>
 
@@ -263,7 +264,7 @@ form.book .cta{width:100%;text-align:center;margin-top:6px}
 <p>Call or text anytime: <a href="tel:+16473894958">(647) 389-4958</a></p>
 <p style="margin-top:22px;font-size:14px;color:rgba(255,255,255,.6)">Classes run Monday to Friday, 4pm to 9pm, and anytime on weekends (all times Eastern). Open to students and adult learners across Canada.</p>
 </div>
-<form class="book" id="bookForm" data-utm>
+<form class="book" id="bookForm" data-utm data-goal="Trial request">
 <input type="hidden" name="access_key" value="0216383f-c37e-45cb-87e1-48988cbb0d50">
 <input type="hidden" name="subject" value="New free trial request from Winny French (Sudbury page)">
 <input type="hidden" name="from_name" value="Winny French Website">
@@ -430,6 +431,7 @@ body: JSON.stringify(Object.fromEntries(new FormData(form)))
 });
 const data = await res.json();
 if (data.success) {
+if (window.wfTrack) { window.wfTrack(form.dataset.goal || 'Trial request', form); } 
 form.reset();
 status.style.color = '#0a8a4a';
 status.textContent = 'Thank you. A tutor will be in touch within 24 hours to schedule your class.';

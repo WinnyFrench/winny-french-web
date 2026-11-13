@@ -185,6 +185,7 @@ table.cost th{background:var(--navy);color:#fff}
 table.cost tr.us td{background:#eef0ff;font-weight:600}
 table.cost a{color:var(--blue)}
 </style>
+<script defer src="/js/wf-analytics.js"></script>
 </head>
 <body>
 <header>
@@ -345,7 +346,7 @@ try{
 const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(form)))});
 const data=await res.json();
 if(data.success){
-if(window.plausible&&form.dataset.goal){window.plausible(form.dataset.goal);}
+if(window.wfTrack&&form.dataset.goal){await window.wfTrack(form.dataset.goal,form);}
 if(form.dataset.redirect){window.location.href=form.dataset.redirect;return;}
 form.reset();status.style.color='#0a8a4a';status.textContent=form.dataset.success||'Thank you. A tutor will be in touch within 24 hours to schedule your class.';
 }else{status.style.color='#E63329';status.textContent='Something went wrong. Please call or text (647) 389-4958 and we will sort it out.';}
