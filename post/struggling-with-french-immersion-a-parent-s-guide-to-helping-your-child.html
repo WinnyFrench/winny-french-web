@@ -19,6 +19,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/blog-style.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Struggling with French Immersion? A Parent's Guide to Helping Your Child", "description": "Your child is struggling in French immersion and you don't speak French. A parent's guide to what actually helps, from tutors who work with immersion kids.", "datePublished": "2026-06-10T09:00:00-04:00", "author": {"@type": "Organization", "name": "Winny French"}, "publisher": {"@type": "Organization", "name": "Winny French"}, "mainEntityOfPage": "https://winnyfrench.com/post/struggling-with-french-immersion-a-parent-s-guide-to-helping-your-child", "inLanguage": "en"}</script>
+<script defer src="/wf-analytics.js"></script>
 </head><body>
 <header><div class="bar">
 <a href="/" class="logo"><span class="b">Winny</span> <span class="r">French</span></a>
@@ -91,7 +92,7 @@
 <div class="wfm" id="lm4-post-wrap">
 <h3>Free parent kit: French Immersion Survival Kit</h3>
 <p class="wfm-lead">For parents who don't speak French: a 10-minute nightly routine, teacher questions and a verb-tense explainer. Free PDF.</p>
-<form class="book" id="lm4-post" data-utm data-goal="LM4 sign-up" data-redirect="/thanks-immersion-parent-kit">
+<form class="book" id="lm4-post" data-utm data-goal="Lead magnet sign-up" data-magnet="French immersion parent kit" data-redirect="/thanks-immersion-parent-kit">
 <input type="hidden" name="access_key" value="0216383f-c37e-45cb-87e1-48988cbb0d50">
 <input type="hidden" name="subject" value="Lead magnet: LM4 French Immersion Survival Kit for Parents Who Don&#x27;t Speak French">
 <input type="hidden" name="from_name" value="Winny French Website">
@@ -217,7 +218,7 @@ try{
 const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(form)))});
 const data=await res.json();
 if(data.success){
-if(window.plausible&&form.dataset.goal){window.plausible(form.dataset.goal);}
+if(window.wfTrack&&form.dataset.goal){await window.wfTrack(form.dataset.goal,form);}
 if(form.dataset.redirect){window.location.href=form.dataset.redirect;return;}
 form.reset();status.style.color='#0a8a4a';status.textContent=form.dataset.success||'Thank you. A tutor will be in touch within 24 hours to schedule your class.';
 }else{status.style.color='#E63329';status.textContent='Something went wrong. Please call or text (647) 389-4958 and we will sort it out.';}

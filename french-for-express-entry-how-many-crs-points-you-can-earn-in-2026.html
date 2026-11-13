@@ -19,6 +19,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/blog-style.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "French for Express Entry: How Many CRS Points You Can Earn in 2026", "description": "French can add up to 74 CRS points to your Express Entry profile in 2026. Here is exactly how the points work and how long it takes to reach NCLC 7.", "datePublished": "2026-06-10T09:00:00-04:00", "author": {"@type": "Organization", "name": "Winny French"}, "publisher": {"@type": "Organization", "name": "Winny French"}, "mainEntityOfPage": "https://winnyfrench.com/post/french-for-express-entry-how-many-crs-points-you-can-earn-in-2026", "inLanguage": "en"}</script>
+<script defer src="/wf-analytics.js"></script>
 </head><body>
 <header><div class="bar">
 <a href="/" class="logo"><span class="b">Winny</span> <span class="r">French</span></a>
@@ -82,7 +83,7 @@
 <div class="wfm" id="lm1-post-wrap">
 <h3>Free download: TEF Canada &amp; TCF Canada Phrase Bank</h3>
 <p class="wfm-lead">Speaking and writing phrases for the exam tasks, plus a one-page NCLC cheat sheet. Free PDF.</p>
-<form class="book" id="lm1-post" data-utm data-goal="LM1 sign-up" data-redirect="/thanks-tef-tcf-phrase-bank">
+<form class="book" id="lm1-post" data-utm data-goal="Lead magnet sign-up" data-magnet="TEF/TCF Canada phrase bank" data-redirect="/thanks-tef-tcf-phrase-bank">
 <input type="hidden" name="access_key" value="0216383f-c37e-45cb-87e1-48988cbb0d50">
 <input type="hidden" name="subject" value="Lead magnet: LM1 TEF Canada &amp; TCF Canada Phrase Bank + NCLC cheat sheet">
 <input type="hidden" name="from_name" value="Winny French Website">
@@ -199,7 +200,7 @@ try{
 const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(form)))});
 const data=await res.json();
 if(data.success){
-if(window.plausible&&form.dataset.goal){window.plausible(form.dataset.goal);}
+if(window.wfTrack&&form.dataset.goal){await window.wfTrack(form.dataset.goal,form);}
 if(form.dataset.redirect){window.location.href=form.dataset.redirect;return;}
 form.reset();status.style.color='#0a8a4a';status.textContent=form.dataset.success||'Thank you. A tutor will be in touch within 24 hours to schedule your class.';
 }else{status.style.color='#E63329';status.textContent='Something went wrong. Please call or text (647) 389-4958 and we will sort it out.';}

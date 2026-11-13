@@ -193,6 +193,7 @@ form.book .cta{width:100%;text-align:center;margin-top:6px}
 ]
 }
 </script>
+<script defer src="/wf-analytics.js"></script>
 </head>
 <body>
 <header>
@@ -283,7 +284,7 @@ form.book .cta{width:100%;text-align:center;margin-top:6px}
 <p>Call or text anytime: <a href="tel:+16473894958">(647) 389-4958</a></p>
 <p style="margin-top:22px;font-size:14px;color:rgba(255,255,255,.6)">Classes run Monday to Friday, 4pm to 9pm, and anytime on weekends (all times Eastern). Open to students and adult learners across Canada.</p>
 </div>
-<form class="book" id="bookForm" data-utm>
+<form class="book" id="bookForm" data-utm data-goal="Trial request">
 <input type="hidden" name="access_key" value="0216383f-c37e-45cb-87e1-48988cbb0d50">
 <input type="hidden" name="subject" value="New free trial request from Winny French (North York page)">
 <input type="hidden" name="from_name" value="Winny French Website">
@@ -448,6 +449,7 @@ body: JSON.stringify(Object.fromEntries(new FormData(form)))
 });
 const data = await res.json();
 if (data.success) {
+if (window.wfTrack) { window.wfTrack(form.dataset.goal || 'Trial request', form); } 
 form.reset();
 status.style.color = '#0a8a4a';
 status.textContent = 'Thank you. A tutor will be in touch within 24 hours to schedule your class.';
