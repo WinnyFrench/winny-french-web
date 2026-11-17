@@ -188,6 +188,22 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:14px;width:11px;heig
 .gbadge{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 18px;text-decoration:none;font-weight:700;color:var(--ink);font-size:15px}
 .req{color:var(--red);font-weight:800}
 @media(min-width:800px){.media3{grid-template-columns:1fr 1fr 1fr}}
+
+/* press strip. To add an outlet, copy an <li> in .press-list. */
+.press{background:var(--soft);padding:42px 0;border-bottom:1px solid var(--line)}
+.press-label{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red);text-align:center;margin:0 0 22px;line-height:1.2}
+.press-list{list-style:none;display:grid;grid-template-columns:1fr;gap:12px;margin:0;padding:0}
+@media(min-width:720px){.press-list{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}}
+.press-list a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;text-decoration:none;min-height:108px;height:100%;padding:20px 16px;background:#fff;border:1px solid var(--line);border-radius:16px}
+.press-list a:hover{border-color:#d5d8ea}
+.press-list a:hover .press-name{color:var(--blue)}
+.press-list a:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.press-name{font-weight:800;letter-spacing:-.02em;font-size:clamp(17px,2vw,20px);color:var(--navy);line-height:1.25;text-wrap:balance}
+.press-qual{font-weight:700;color:var(--muted);white-space:nowrap}
+.press-meta{font-size:13.5px;font-weight:600;color:var(--ink);line-height:1.35}
+.press-meta cite{font-style:italic}
+.press-date{font-size:12.5px;font-weight:600;color:var(--muted);letter-spacing:.02em}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 </style>
 <script type="application/ld+json">
 {
@@ -238,6 +254,41 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:14px;width:11px;heig
 <p class="sub">De l'aide aux devoirs et un accompagnement en grammaire, en rédaction et en lecture pour les élèves des écoles de langue française. Les petits groupes sont à 25 $ par élève par heure. Les cours particuliers sont à 35 $/heure, ou à 30 $/heure chacun pour deux séances individuelles ou plus par semaine.</p>
 <a href="#contact" class="cta light">Réservez un cours d'essai gratuit</a>
 <p class="reassure">Essai gratuit de 30 minutes. Sans engagement. Des cours 7 jours sur 7.</p>
+</div>
+</section>
+
+<!-- PRESSE
+     Copier un <li> pour ajouter un média déjà publié, avec une URL vérifiée.
+     Chaque entrée : nom du média, qualificatif optionnel dans .press-qual, émission optionnelle dans .press-meta, date dans <time>.
+     Pas encore en ligne, donc à laisser de côté : Canadian SME Small Business Magazine, Le Goût de vivre.
+-->
+<section class="press" id="press" aria-labelledby="press-heading">
+<div class="wrap">
+<h2 class="press-label" id="press-heading">On en parle</h2>
+<ul class="press-list">
+<li>
+<a href="https://ici.radio-canada.ca/ohdio/premiere/emissions/y-a-pas-deux-matins-pareils/episodes/1232773/lundi-16-novembre-2026" target="_blank" rel="noopener noreferrer">
+<span class="press-name">ICI Première <span class="press-qual">(Radio-Canada)</span></span>
+<span class="press-meta"><cite>Y a pas deux matins pareils</cite></span>
+<time class="press-date" datetime="2026-11-16">16 novembre 2026</time>
+<span class="sr-only">S'ouvre dans un nouvel onglet.</span>
+</a>
+</li>
+<li>
+<a href="https://medium.com/authority-magazine/winston-burron-of-winny-french-five-things-i-learned-as-a-twenty-something-founder-b904489a60f1" target="_blank" rel="noopener noreferrer">
+<span class="press-name">Authority Magazine <span class="press-qual">(on Medium)</span></span>
+<time class="press-date" datetime="2025-06">juin 2025</time>
+<span class="sr-only">S'ouvre dans un nouvel onglet.</span>
+</a>
+</li>
+<li>
+<a href="https://bcparent.ca/interview-with-winny-french-your-pathway-to-fluency/" target="_blank" rel="noopener noreferrer">
+<span class="press-name">BC Parent Newsmagazine</span>
+<time class="press-date" datetime="2025-09">septembre 2025</time>
+<span class="sr-only">S'ouvre dans un nouvel onglet.</span>
+</a>
+</li>
+</ul>
 </div>
 </section>
 
