@@ -227,6 +227,22 @@ footer small{opacity:.5;font-size:12.5px}
 .langtoggle{display:inline-block;font-weight:800;font-size:14px;color:var(--navy);border:1px solid var(--line);border-radius:999px;padding:7px 13px;text-decoration:none}.langtoggle:hover{background:var(--soft)}
 .req{color:#9f1d1d;font-weight:800}
 @media(min-width:800px){.media3{grid-template-columns:1fr 1fr 1fr}}
+
+/* press strip. To add an outlet, copy an <li> in .press-list. */
+.press{background:var(--soft);padding:42px 0;border-bottom:1px solid var(--line)}
+.press-label{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red);text-align:center;margin:0 0 22px;line-height:1.2}
+.press-list{list-style:none;display:grid;grid-template-columns:1fr;gap:12px;margin:0;padding:0}
+@media(min-width:720px){.press-list{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}}
+.press-list a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;text-decoration:none;min-height:108px;height:100%;padding:20px 16px;background:#fff;border:1px solid var(--line);border-radius:16px}
+.press-list a:hover{border-color:#d5d8ea}
+.press-list a:hover .press-name{color:var(--blue)}
+.press-list a:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.press-name{font-weight:800;letter-spacing:-.02em;font-size:clamp(17px,2vw,20px);color:var(--navy);line-height:1.25;text-wrap:balance}
+.press-qual{font-weight:700;color:var(--muted);white-space:nowrap}
+.press-meta{font-size:13.5px;font-weight:600;color:var(--ink);line-height:1.35}
+.press-meta cite{font-style:italic}
+.press-date{font-size:12.5px;font-weight:600;color:var(--muted);letter-spacing:.02em}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 </style>
 <script type="application/ld+json">
 {
@@ -392,6 +408,41 @@ footer small{opacity:.5;font-size:12.5px}
 <p class="sub">French tutoring that clicks. Small groups of up to three are $25 per student per hour. One-on-one is $35 per hour, or $30 per hour each when a family takes more than one one-on-one class a week. Free 30-minute trial, no strings attached.</p>
 <a href="#contact" class="cta light">Book Your Free Class</a>
 <p class="reassure">Free 30-minute trial. No strings attached. Classes 7 days a week.</p>
+</div>
+</section>
+
+<!-- PRESS
+     Copy an <li> to add a live outlet. Only published coverage with a verified URL.
+     Each item: outlet name, optional qualifier in .press-qual, optional show in .press-meta, date in <time>.
+     Leave off until a live URL exists: Canadian SME Small Business Magazine, Le Goût de vivre.
+-->
+<section class="press" id="press" aria-labelledby="press-heading">
+<div class="wrap">
+<h2 class="press-label" id="press-heading">As seen on</h2>
+<ul class="press-list">
+<li>
+<a href="https://ici.radio-canada.ca/ohdio/premiere/emissions/y-a-pas-deux-matins-pareils/episodes/1232773/lundi-16-novembre-2026" target="_blank" rel="noopener noreferrer">
+<span class="press-name">ICI Première <span class="press-qual">(Radio-Canada)</span></span>
+<span class="press-meta"><cite lang="fr">Y a pas deux matins pareils</cite></span>
+<time class="press-date" datetime="2026-11-16">Nov 16, 2026</time>
+<span class="sr-only">Opens in a new tab.</span>
+</a>
+</li>
+<li>
+<a href="https://medium.com/authority-magazine/winston-burron-of-winny-french-five-things-i-learned-as-a-twenty-something-founder-b904489a60f1" target="_blank" rel="noopener noreferrer">
+<span class="press-name">Authority Magazine <span class="press-qual">(on Medium)</span></span>
+<time class="press-date" datetime="2025-06">Jun 2025</time>
+<span class="sr-only">Opens in a new tab.</span>
+</a>
+</li>
+<li>
+<a href="https://bcparent.ca/interview-with-winny-french-your-pathway-to-fluency/" target="_blank" rel="noopener noreferrer">
+<span class="press-name">BC Parent Newsmagazine</span>
+<time class="press-date" datetime="2025-09">Sep 2025</time>
+<span class="sr-only">Opens in a new tab.</span>
+</a>
+</li>
+</ul>
 </div>
 </section>
 
