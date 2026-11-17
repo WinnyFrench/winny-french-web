@@ -194,11 +194,14 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:14px;width:11px;heig
 .press-label{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red);text-align:center;margin:0 0 22px;line-height:1.2}
 .press-list{list-style:none;display:grid;grid-template-columns:1fr;gap:12px;margin:0;padding:0}
 @media(min-width:720px){.press-list{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}}
-.press-list a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;text-decoration:none;min-height:108px;height:100%;padding:20px 16px;background:#fff;border:1px solid var(--line);border-radius:16px}
+.press-list a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;text-decoration:none;min-height:148px;height:100%;padding:22px 16px 18px;background:#fff;border:1px solid var(--line);border-radius:16px}
 .press-list a:hover{border-color:#d5d8ea}
-.press-list a:hover .press-name{color:var(--blue)}
+.press-list a:hover .press-name,.press-list a:focus-visible .press-name{color:var(--blue)}
 .press-list a:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
-.press-name{font-weight:800;letter-spacing:-.02em;font-size:clamp(17px,2vw,20px);color:var(--navy);line-height:1.25;text-wrap:balance}
+.press-logo{display:block;height:44px;width:auto;max-width:100%;object-fit:contain}
+.press-logo.stack{height:64px}
+.press-logo.crest{height:72px;width:72px;border-radius:50%}
+.press-name{font-weight:800;letter-spacing:-.02em;font-size:15px;color:var(--navy);line-height:1.25;text-wrap:balance}
 .press-qual{font-weight:700;color:var(--muted);white-space:nowrap}
 .press-meta{font-size:13.5px;font-weight:600;color:var(--ink);line-height:1.35}
 .press-meta cite{font-style:italic}
@@ -259,8 +262,12 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:14px;width:11px;heig
 
 <!-- PRESSE
      Copier un <li> pour ajouter un média déjà publié, avec une URL vérifiée.
-     Chaque entrée : nom du média, qualificatif optionnel dans .press-qual, émission optionnelle dans .press-meta, date dans <time>.
+     Chaque entrée : logo local dans /images/press/ (le alt est le nom du média), qualificatif optionnel, émission optionnelle, date dans <time>.
      Pas encore en ligne, donc à laisser de côté : Canadian SME Small Business Magazine, Le Goût de vivre.
+     Fichiers logo, chacun pris chez le média :
+     ici-radio-canada-premiere.png — PNG RVB officiel dans ICI_PREMIERE_OFFICIEL.zip, https://ici.radio-canada.ca/bdu/ici-rc-premiere.html
+     authority-magazine.png — écusson d'en-tête, https://authoritymag.co/crest-logo.jpg
+     bc-parent-newsmagazine.png — https://bcparent.ca/wp-content/uploads/2016/04/bc-parent-logo-dark-red-1800-676.png
 -->
 <section class="press" id="press" aria-labelledby="press-heading">
 <div class="wrap">
@@ -268,7 +275,8 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:14px;width:11px;heig
 <ul class="press-list">
 <li>
 <a href="https://ici.radio-canada.ca/ohdio/premiere/emissions/y-a-pas-deux-matins-pareils/episodes/1232773/lundi-16-novembre-2026" target="_blank" rel="noopener noreferrer">
-<span class="press-name">ICI Première <span class="press-qual">(Radio-Canada)</span></span>
+<img class="press-logo" src="/images/press/ici-radio-canada-premiere.png" alt="ICI Première (Radio-Canada)" width="1790" height="229">
+<span class="press-name" aria-hidden="true">ICI Première <span class="press-qual">(Radio-Canada)</span></span>
 <span class="press-meta"><cite>Y a pas deux matins pareils</cite></span>
 <time class="press-date" datetime="2026-11-16">16 novembre 2026</time>
 <span class="sr-only">S'ouvre dans un nouvel onglet.</span>
@@ -276,14 +284,16 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:14px;width:11px;heig
 </li>
 <li>
 <a href="https://medium.com/authority-magazine/winston-burron-of-winny-french-five-things-i-learned-as-a-twenty-something-founder-b904489a60f1" target="_blank" rel="noopener noreferrer">
-<span class="press-name">Authority Magazine <span class="press-qual">(on Medium)</span></span>
+<img class="press-logo crest" src="/images/press/authority-magazine.png" alt="Authority Magazine (on Medium)" width="1000" height="1000">
+<span class="press-name" aria-hidden="true">Authority Magazine <span class="press-qual">(on Medium)</span></span>
 <time class="press-date" datetime="2025-06">juin 2025</time>
 <span class="sr-only">S'ouvre dans un nouvel onglet.</span>
 </a>
 </li>
 <li>
 <a href="https://bcparent.ca/interview-with-winny-french-your-pathway-to-fluency/" target="_blank" rel="noopener noreferrer">
-<span class="press-name">BC Parent Newsmagazine</span>
+<img class="press-logo stack" src="/images/press/bc-parent-newsmagazine.png" alt="BC Parent Newsmagazine" width="1800" height="676">
+<span class="press-name" aria-hidden="true">BC Parent Newsmagazine</span>
 <time class="press-date" datetime="2025-09">septembre 2025</time>
 <span class="sr-only">S'ouvre dans un nouvel onglet.</span>
 </a>
