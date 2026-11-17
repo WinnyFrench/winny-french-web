@@ -206,6 +206,7 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:14px;width:11px;heig
 .press-meta{font-size:13.5px;font-weight:600;color:var(--ink);line-height:1.35}
 .press-meta cite{font-style:italic}
 .press-date{font-size:12.5px;font-weight:600;color:var(--muted);letter-spacing:.02em}
+.press-read{font-size:13px;font-weight:700;color:var(--blue);text-decoration:underline;text-underline-offset:3px}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 </style>
 <script type="application/ld+json">
@@ -263,8 +264,9 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:14px;width:11px;heig
 <!-- PRESSE
      Copier un <li> pour ajouter un média déjà publié, avec une URL vérifiée.
      Chaque entrée : logo local dans /images/press/ (le alt est le nom du média), qualificatif optionnel, émission optionnelle, date dans <time>.
-     Pas encore en ligne, donc à laisser de côté : Canadian SME Small Business Magazine, Le Goût de vivre.
+     Pas encore en ligne, donc à laisser de côté : Le Goût de vivre.
      Fichiers logo, chacun pris chez le média :
+     canadiansme.png — logo d'en-tête https://canadiansme.ca/assets/canadiansme-logo-520.webp
      ici-radio-canada-premiere.png — PNG RVB officiel dans ICI_PREMIERE_OFFICIEL.zip, https://ici.radio-canada.ca/bdu/ici-rc-premiere.html
      authority-magazine.png — écusson d'en-tête, https://authoritymag.co/crest-logo.jpg
      bc-parent-newsmagazine.png — https://bcparent.ca/wp-content/uploads/2016/04/bc-parent-logo-dark-red-1800-676.png
@@ -273,6 +275,16 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:14px;width:11px;heig
 <div class="wrap">
 <h2 class="press-label" id="press-heading">On en parle</h2>
 <ul class="press-list">
+<li>
+<a href="https://canadiansme.ca/what-i-automate-as-a-student-founder-and-what-i-still-do-myself/" target="_blank" rel="noopener noreferrer">
+<img class="press-logo" src="/images/press/canadiansme.png" alt="CanadianSME" width="520" height="90">
+<span class="press-name" aria-hidden="true">CanadianSME</span>
+<span class="press-meta">Winston Burron, fondateur, a signé un article</span>
+<time class="press-date" datetime="2026-11-17">17 novembre 2026</time>
+<span class="press-read">Lire l'article</span>
+<span class="sr-only">S'ouvre dans un nouvel onglet.</span>
+</a>
+</li>
 <li>
 <a href="https://ici.radio-canada.ca/ohdio/premiere/emissions/y-a-pas-deux-matins-pareils/episodes/1232773/lundi-16-novembre-2026" target="_blank" rel="noopener noreferrer">
 <img class="press-logo" src="/images/press/ici-radio-canada-premiere.png" alt="ICI Première (Radio-Canada)" width="1790" height="229">
