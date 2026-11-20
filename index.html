@@ -255,7 +255,7 @@ footer small{opacity:.5;font-size:12.5px}
 .press-meta cite{font-style:italic}
 .press-date{font-size:12.5px;font-weight:600;color:var(--muted);letter-spacing:.02em}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-</style>
+/* press ticker */.press{padding:30px 0}.press-label{margin:0 0 18px}.press .wrap{overflow:hidden}.press-list{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:22px 48px;grid-template-columns:none}.press-list.is-ticker{flex-wrap:nowrap;justify-content:flex-start;width:max-content;gap:64px;animation:press-scroll 45s linear infinite}.press-list.is-ticker:hover,.press-list.is-ticker:focus-within{animation-play-state:paused}.press-list>li{grid-column:auto;flex:0 0 auto}.press-list a{min-height:48px;padding:0;background:none;border:0;border-radius:0;gap:0}.press-list a:focus-visible{outline:2px solid var(--blue);outline-offset:4px;border-radius:8px}.press-name,.press-meta,.press-date{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.press-logo,.press-logo.stack{height:34px;width:auto;max-width:none}.press-logo.crest{height:40px;width:40px;border-radius:50%}.press-list a:hover .press-logo{opacity:.7}@keyframes press-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}@media(prefers-reduced-motion:reduce){.press-list.is-ticker{animation:none;flex-wrap:wrap;justify-content:center;width:auto;gap:22px 48px}}</style>
 <script type="application/ld+json">
 {
 "@context": "https://schema.org",
@@ -928,5 +928,5 @@ status.textContent = 'Something went wrong. Please call or text (647) 389-4958 a
 </script>
 
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0f710da95a134018a2f9a80e820a8de6"}'></script>
-</body>
+<script>(function(){var l=document.querySelector('#press .press-list');if(!l||l.dataset.ticker)return;if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;Array.prototype.slice.call(l.children).forEach(function(li){var c=li.cloneNode(true);c.setAttribute('aria-hidden','true');var a=c.querySelector('a');if(a)a.setAttribute('tabindex','-1');l.appendChild(c);});l.classList.add('is-ticker');l.dataset.ticker='1';})();</script></body>
 </html>
