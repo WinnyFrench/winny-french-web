@@ -189,20 +189,12 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:14px;width:11px;heig
 .req{color:var(--red);font-weight:800}
 @media(min-width:800px){.media3{grid-template-columns:1fr 1fr 1fr}}
 
-/* press strip. To add an outlet, copy an <li> in .press-list.
-   The 720px spans lay five cards out as 3 + 2 until the row fits five across. */
+/* press strip. To add an outlet, copy an <li> in .press-list. */
 .press{background:var(--soft);padding:42px 0;border-bottom:1px solid var(--line)}
 .press-label{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red);text-align:center;margin:0 0 22px;line-height:1.2}
 .press-list{list-style:none;display:grid;grid-template-columns:1fr;gap:12px;margin:0;padding:0}
-@media(min-width:720px){
-.press-list{grid-template-columns:repeat(6,minmax(0,1fr))}
-.press-list>li:nth-child(-n+3){grid-column:span 2}
-.press-list>li:nth-child(n+4){grid-column:span 3}
-}
-@media(min-width:1100px){
-.press-list{grid-template-columns:repeat(5,minmax(0,1fr))}
-.press-list>li:nth-child(-n+3),.press-list>li:nth-child(n+4){grid-column:auto}
-}
+@media(min-width:720px){.press-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1100px){.press-list{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .press-list a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;text-decoration:none;min-height:148px;height:100%;padding:22px 16px 18px;background:#fff;border:1px solid var(--line);border-radius:16px}
 .press-list a:hover{border-color:#d5d8ea}
 .press-list a:hover .press-name,.press-list a:focus-visible .press-name{color:var(--blue)}
@@ -272,7 +264,7 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:14px;width:11px;heig
 <!-- PRESSE
      Copier un <li> pour ajouter un média déjà publié, avec une URL vérifiée.
      Chaque entrée : logo local dans /images/press/ (le alt est le nom du média), qualificatif optionnel, émission optionnelle, date dans <time>.
-     Pas encore en ligne, donc à laisser de côté : Le Goût de vivre.
+     Le Goût de vivre n'est pas en ligne : la carte mène à la page d'accueil du journal.
      Fichiers logo, chacun pris chez le média :
      canadiansme.png — logo d'en-tête https://canadiansme.ca/assets/canadiansme-logo-520.webp
      ici-radio-canada-premiere.png — PNG RVB officiel dans ICI_PREMIERE_OFFICIEL.zip, https://ici.radio-canada.ca/bdu/ici-rc-premiere.html
@@ -281,11 +273,21 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:14px;width:11px;heig
      aurora-today.png — mot-symbole fond clair, à partir du SVG du média
      https://www.vmcdn.ca/files/aurora/images/layout/logo_auroratoday_white_206x40px.svg
      en bleu (#1566a7), comme https://www.vmcdn.ca/f/files/aurora/images/layout/logo_auroratoday_blue_206x40px.png
+     le-gout-de-vivre.png — mot-symbole d'en-tête https://goutdevivre-wpoffloadmedia.s3.ca-central-1.amazonaws.com/wp-content/uploads/2020/12/04174155/cropped-Logo-2020-LGDV.png
 -->
 <section class="press" id="press" aria-labelledby="press-heading">
 <div class="wrap">
 <h2 class="press-label" id="press-heading">On en parle</h2>
 <ul class="press-list">
+<li>
+<a href="https://www.legoutdevivre.com/" target="_blank" rel="noopener noreferrer">
+<img class="press-logo" src="/images/press/le-gout-de-vivre.png" alt="Le Goût de Vivre" width="432" height="101">
+<span class="press-name" aria-hidden="true">Le Goût de Vivre</span>
+<span class="press-meta"><cite>Un étudiant de l'Université de Toronto rend le tutorat en français plus accessible</cite></span>
+<time class="press-date" datetime="2026-11-19">19 novembre 2026</time>
+<span class="sr-only">S'ouvre dans un nouvel onglet.</span>
+</a>
+</li>
 <li>
 <a href="https://www.auroratoday.ca/local-news/local-student-makes-french-math-tutoring-more-affordable-for-lower-income-families-13026667" target="_blank" rel="noopener noreferrer">
 <img class="press-logo" src="/images/press/aurora-today.png" alt="Aurora Today" width="1030" height="201">
